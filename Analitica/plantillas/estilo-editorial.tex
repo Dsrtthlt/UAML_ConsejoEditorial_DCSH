@@ -1,0 +1,28 @@
+% === Fuentes ===
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+% === Interlineado ===
+\usepackage{setspace}
+\onehalfspacing
+
+% === Colores ===
+\usepackage{xcolor}
+\definecolor{Pantone253C}{HTML}{AD25A8}
+
+% === Encabezados y pies (KOMA-Script) ===
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\sffamily\footnotesize}
+\ihead{\textnormal{\color{Pantone253C}\articuloTitulo}}
+\ohead{\pagemark}
+\setkomafont{pagefoot}{\sffamily\footnotesize}
+\ifoot{\textnormal{\color{Pantone253C}An@lítica}}
+\rofoot{\textnormal{\color{Pantone253C}Volumen 6, Número 6}} 
+
+
+\KOMAoptions{headsepline=0.1pt, footsepline=0.1pt}
+\addtokomafont{headsepline}{\color{Pantone253C}}
+\addtokomafont{footsepline}{\color{Pantone253C}}
+\addtokomafont{pagenumber}{\color{Pantone253C}}

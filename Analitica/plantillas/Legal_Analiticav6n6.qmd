@@ -1,0 +1,56 @@
+---
+title: ""
+format:
+  pdf:
+    include-in-header:
+      - estilo-legal.tex
+    header-includes: |
+      \newcommand{\numero}{$_$}
+      \newcommand{\volumen}{$_$}
+      \newcommand{\anio}{$202_$}
+      \newcommand{\issn}{$XXXX-XXXX$}
+      \newcommand{\size}{1.2mb}
+    toc: false
+    number-sections: false
+---
+
+**An@lítica.**
+Revista de la División de Ciencias Sociales y Humanidades, UAM-Lerma\
+**Contacto**: 
+
+**UNIVERSIDAD AUTÓNOMA METROPOLITANA, UNIDAD LERMA**
+
+*Dr. Gabriel Sóto Córtes*\
+Rector\
+*Dra. Alma Patricia de León Calderón*\
+Secretaria\
+*Dr. Raúl Hernández Mar*\
+Director de la División de Ciencias Sociales y Humanidades\
+*Dra. Ana Carolina Robles Salvador*\
+Secretaria Académica de la División de Ciencias Sociales y Humanidades\
+
+**COMITÉ EDITORIAL DE CIENCIAS SOCIALES Y HUMANIDADES**\
+PUBLICACIONES PERIÓDICAS
+
+*Abigail Martínez Mendoza*\
+Coordinadora General\
+*Omar Valencia Dominguez*\
+*Salvador Vázquez Fernández*\
+Departamento de Procesos Sociales\
+*Hugo Solís García*\
+Departamento de Arte y Humanidades\
+*José Omar Pérez Baños*\
+Departamento de Estudios Culturales\
+
+**EDICIÓN TÉCNICA Y CORRECCIÓN DE ESTILO**\
+*Jonathan Armando Chaves Solis y José Omar Pérez Baños*
+
+---
+
+\footnotesize \textbf{An@lítica}, número \numero, volumen \volumen, \anio, es una publicación anual de la Universidad Autónoma Metropolitana a través de la Unidad Lerma, División de Ciencias Sociales y Humanidades. Prolongación Canal de Miramontes 3855, Colonia ExHacienda San Juan de Dios, Alcaldía Tlalpan, C.P. 14387, Ciudad de México y Av. de las Garzas No. 10, Colonia El Panteón, Lerma de Villada, Municipio de Lerma, Estado de México, C.P. 52005. Teléfono: 728 282 7002. Certificado de Reserva de Derechos al Uso Exclusivo de Título No. ______. ISSN \issn, ambos otorgados por el Instituto Nacional del Derecho de Autor. Responsable de la última actualización de este número: José Omar Pérez Baños. Tamaño del archivo: \size.
+
+La revista se encuentra disponible en acceso abierto en la página: <http://revista-csh.ler.uam.mx/index.php/rda>
+
+**Nota importante**: Las expresiones vertidas por los autores no necesariamente reflejan la postura del editor de la publicación.
+
+**Derechos de reproducción**: Queda estrictamente prohibida la reproducción total o parcial de los contenidos e imágenes de la publicación sin previa autorización de la Universidad Autónoma Metropolitana.
