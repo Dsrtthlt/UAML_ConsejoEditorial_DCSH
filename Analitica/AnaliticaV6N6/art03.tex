@@ -1,0 +1,786 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{interact}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\setcounter{page}{47}
+\usepackage{orcidlink}
+\input{/Users/omarperezbanos/Documents/Github/UAML_ConsejoEditorial_DCSH/Analitica/AnaliticaV6N6/estilo-revista.tex}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Nuevas perspectivas en la escritura y divulgación de las ciencias sociales},
+  pdfauthor={Paola Vázquez Almanza},
+  pdfkeywords={Individualización, Teoría social, Escritura académica},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Nuevas perspectivas en la escritura y divulgación de las ciencias
+sociales}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{New Perspectives in Writing and Dissemination of the Social
+Sciences}
+\author{Paola Vázquez Almanza \textbar\ \textbar\ 
+Universidad Nacional Autónoma de México}
+
+
+\thanks{CONTACTO: \href{mailto:paovaal@comunidad.unam.mx}{paovaal@comunidad.unam.mx}.}
+\begin{document}
+\captionsetup{labelsep=space}
+\maketitle
+
+
+\newcommand{\articuloTitulo}{Nuevas perspectivas en la escritura}
+
+\begin{footnotesize}
+\textbf{Resumen}
+
+El artículo analiza cómo el proceso de individuación afecta a las ciencias sociales y su escritura. A partir de las reflexiones de teóricos como Danilo Martuccelli, José Santiago, François Dubet y Guy Bajoit, se argumenta que la experiencia individual debe ocupar un lugar central en la investigación social contemporánea. Se destaca la necesidad de renovar las categorías analíticas y las formas de comunicar los hallazgos científicos para hacerlos más accesibles y relevantes para un público no especializado. Las conclusiones subrayan la importancia de democratizar el conocimiento científico y fomentar un debate público informado, lo que podría ofrecer a la ciudadanía herramientas útiles para comprender mejor su entorno y tomar decisiones informadas. La propuesta teórico-práctica presentada en este artículo busca ampliar las audiencias de las ciencias sociales y reconciliar los roles de investigadores y divulgadores.
+
+\textbf{Palabras clave}
+
+Individualización, Teoría social, Escritura académica
+\end{footnotesize}
+
+\newpage
+
+\begin{footnotesize}
+\textbf{Abstract}
+
+This article examines how the process of individualization impacts social sciences and their scholarly writing. Drawing on the reflections of theorists such as Danilo Martuccelli, José Santiago, François Dubet, and Guy Bajoit, it argues that individual experience must occupy a central place in contemporary social research. The necessity to renew analytical categories and the communication of scientific findings is emphasized, aiming to render them more accessible and relevant to non-specialist audiences. The conclusions underscore the importance of democratizing scientific knowledge and fostering an informed public debate, which could equip citizens with tools to better understand their environment and make informed decisions. The theoretical-practical proposal outlined in this article seeks to expand the audiences of social sciences and reconcile the roles of researchers and science communicators.
+
+\textbf{Keywords}
+
+Individualization, Social Theory, Academic Writing
+\end{footnotesize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Introducción}\label{introducciuxf3n}
+
+En la trilogía que compone \emph{La era de la información} (1999),
+Manuel Castells ensayó una teoría sistémica que explica el impacto de
+las nuevas tecnologías de la comunicación y la información. A lo largo
+de esta obra, Castells planteó que la sociedad de fin de siglo se
+transformaba en una red global de información y comunicación en la que
+la generación, procesamiento y transmisión de información se convertiría
+en una de las fuentes principales de producción y poder.
+
+Aunque Castells anticipó que el siglo XXI traería nuevas desigualdades
+derivadas del desarrollo tecnológico, jamás imaginó que en tan sólo unas
+décadas transitaríamos de una era de la información a una era de la
+desinformación. Si bien el autor previó que la transmisión de la
+información sería un nuevo ámbito de poder, no sospechó que los poderes
+político-económicos saturarían el espacio público con datos e
+información falsa para causar desinformación y generar un ruido
+comunicativo sin parangón.
+
+No queda duda de que vivimos en una época marcada por las noticias
+falsas, campañas de difamación, \emph{shitstorms}, propaganda electoral
+y \emph{deep fakes}, adentrándonos en lo que se ha denominado
+``posverdad''. El término ``posverdad'', según la RAE, es la
+``distorsión deliberada que manipula creencias y emociones con el fin de
+influir en la opinión pública'' (DRAE, 2014); y no es extraño que este
+término haya sido seleccionado la palabra del año en 2016 por el
+\emph{Oxford English Dictionary}, un año en el que los conservadurismos
+y populismos comenzaron a expandirse con mayor fuerza alrededor del
+mundo.
+
+Aunque se puede argumentar que la información siempre ha sido una forma
+de poder y que la manipulación de la opinión pública no es un fenómeno
+nuevo, lo cierto es que la circulación rápida y expansiva de
+información, facilitada por las redes sociales y los canales de
+comunicación, hace que esta situación sea única y preocupante como se
+comprobó durante la crisis sanitaria de la Covid-19.
+
+Durante la pandemia, se generaron las condiciones idóneas para que las
+prácticas de desinformación se volvieran cada vez más habituales y se
+multiplicaron los retos provocados por los cambios sociales,
+tecnológicos, ambientales, científicos y políticos del siglo XXI. Ante
+esta crisis, numerosos investigadores y académicos de universidades
+públicas se organizaron con el propósito de combatir las noticias falsas
+y acercarse a la ciudadanía.
+
+Estos esfuerzos fueron posibles gracias a que el clima de incertidumbre
+mundial fomentó en la ciudadanía un deseo de encontrar fuentes
+confiables de información para tomar decisiones y para comprender los
+fenómenos estructurales que le afectan cotidiana y directamente. Y si
+bien hubo un acercamiento entre academia y ciudadanía\footnote{A raíz de
+  la pandemia de Covid-19, numerosas instituciones académicas en América
+  Latina redoblaron esfuerzos para acercar la ciencia al público,
+  priorizando una comunicación clara y pertinente desde sus centros de
+  divulgación. Surgieron también colectivos de científicas y científicos
+  dedicados a combatir la desinformación, como el grupo argentino
+  ``Ciencia Anti Fake News'', creado por integrantes del CONICET para
+  contrarrestar noticias falsas en tiempos de crisis sanitaria. De forma
+  paralela, la UNAM, a través de su Programa Universitario de Estudios
+  sobre la Democracia, Justicia y Sociedad, lanzó un curso especializado
+  en la verificación y combate de noticias falsas. Estas acciones y
+  debates sobre la importancia de la divulgación y la ciudadanización de
+  la ciencia no se limitaron únicamente a la emergencia, sino que se
+  mantienen vigentes en el entorno académico latinoamericano. Prueba de
+  ello son los encuentros organizados posteriormente, como el evento
+  ``aC-dC (antes del Covid-19 y después del Covid-19). Experiencias,
+  aprendizajes y resignificaciones de la ciencia en pandemia'',
+  convocado por la Academia Joven de Argentina, donde se discutieron
+  estrategias de divulgación y experiencias de comunicación pública de
+  las ciencias. Asimismo, en las Jornadas ``Escribir lo social'',
+  especialistas en ciencias sociales, escritores y periodistas
+  reflexionaron sobre diferentes formas de abordar y transmitir el
+  conocimiento científico y social al público general.}, parece que esto
+no fue suficiente para que las universidades públicas se replanteasen su
+responsabilidad con la ciudadanía o su función social más allá de la
+producción de conocimiento experto.
+
+En su mayoría, las universidades siguen una tendencia hacia la
+hiperespecialización, privatización del conocimiento, monetización de
+los productos académicos, homogeneización de las formas de hacer
+ciencia, refinamiento metodológico y una lógica neoliberal de producción
+que ya desde finales del siglo XX preocupaba a autores como
+Jean-François Lyotard (2019), Russell Jacoby (2000), Pierre Bourdieu
+(2009, 2011) y Zygmunt Bauman (1997).
+
+Estamos ante una transformación social que obliga a ampliar los alcances
+del conocimiento científico a través del rediseño o actualización de las
+categorías de análisis, de las formas de comunicar y de las
+explicaciones producidas por las ciencias sociales. Es primordial
+aprovechar esta oportunidad para realizar una autocrítica de las
+ciencias sociales, poner a prueba la interdisciplinariedad y apoyar
+institucionalmente los intentos de comunicar el trabajo científico de
+manera más atractiva y relevante para un público no especializado.
+
+Evidentemente esto no implica que todos los investigadores deban
+necesariamente orientar sus hallazgos a la divulgación. Tan sólo se
+quiere evidenciar la importancia que tiene actualmente legitimar y
+fomentar la comunicación científica sobre lo social y seguir el ejemplo
+de las denominadas ``ciencias duras'' en temas de la divulgación y
+difusión de sus hallazgos. Asimismo, es importante aclarar que aunque la
+divulgación de las ciencias sociales no constituye una etapa intrínseca
+o indispensable de la labor científica, sí se relaciona con una función
+social relevante del conocimiento generado en las universidades
+públicas.
+
+A la luz de los retos del presente, es imperativo que la academia no
+sólo actualice sus métodos y objetivos, sino que también renueve su
+forma de escribir y comunicar sus explicaciones de la realidad social. Y
+con la finalidad de abrir este debate, este artículo abordará tres temas
+principales: 1) la divulgación en el campo de las ciencias sociales, 2)
+los efectos que tienen cambios sociales como el proceso de individuación
+en la teoría social y 3) el doble rol de académicos y escritores que
+asumen los cientistas sociales al hacer divulgación.
+
+\subsection{La divulgación más allá de la
+forma}\label{la-divulgaciuxf3n-muxe1s-alluxe1-de-la-forma}
+
+En las últimas décadas, las ciencias sociales se han acercado a otros
+campos de conocimiento como la música o la biología, ganando así en
+hibridez y obteniendo recursos para amplificar el entendimiento del
+mundo social. Los coqueteos que autores clásicos de las ciencias
+sociales como Durkheim, Weber o Marx tenían con la literatura o el arte,
+el día de hoy se consolidan en las ``escrituras del yo'' y la
+autoetnografía como en el caso de Didier Eribon, Alice Goffman Ivan
+Jablonka, Paulo Ravecca, Guy Bajoit o Lea Ypi. También se han dado
+debates relevantes en torno a la escritura académica y a otras maneras
+de narrar y comunicar los fenómenos sociales para un público general.
+
+Una de las mayores apuestas de estos años ha sido apoyar la divulgación
+de las ciencias sociales a través de medios no tradicionales para la
+academia como podcast, textos híbridos y breves, fanzines, campañas en
+redes sociales, bitácoras, videoblogs, \emph{tik toks}, memes o
+infografías. Asimismo, se ha multiplicado notablemente la oferta de
+diplomados, talleres y cursos de \emph{storytelling} dentro de las
+instituciones universitarias para que los cientistas sociales aprendan a
+hacer digerible y disfrutable el conocimiento que producen.
+
+No obstante, la labor de divulgación de las ciencias sociales continúa
+recibiendo poco apoyo institucional y se le dedica significativamente
+menos análisis teórico y sistemático en comparación con otros procesos y
+etapas de la investigación científica. De hecho, parece que tanto la
+divulgación como la comunicación de los productos científicos siguen
+considerándose algo alejado del quehacer científico. Por ello, no es
+extraño que usualmente el esfuerzo de divulgar las ciencias sociales
+fomente que los cientistas sociales asuman un doble rol: el de
+académicos/investigadores y el de divulgadores/escritores
+
+Y más allá de la doble vida que puede provocar el deseo de divulgar las
+ciencias sociales, muchas veces no se cae en cuenta de que esos
+ejercicios de divulgación se limitan a cambiar la forma en la que se
+comunican estos académicos sin que esto implique una reflexión profunda
+sobre cómo se está haciendo ciencias sociales actualmente y cómo
+debiesen ajustarse a una realidad cambiante y cada vez más compleja.
+
+Desde mi punto de vista, la divulgación de las ciencias sociales no
+puede reducirse a lo estilístico o al medio, se requiere explorar
+también su dimensión epistemológica, disciplinar y metodológica.
+Replantear sólo el medio a través del que se comunica y refinar la forma
+en la que se narra la realidad social puede aplazar, sin proponérselo,
+la comprensión de las múltiples dimensiones que intervienen en la
+búsqueda y puesta en práctica de formas alternativas de escribir y
+comunicar las ciencias sociales.
+
+Para comprender qué implica escribir y comunicar ciencias sociales,
+habría que preguntarnos lo siguiente: ¿Qué tan necesaria es una
+reflexión teórica y práctica sobre el proceso de escritura en las
+ciencias sociales y sus dimensiones epistemológicas y metodológicas? Y a
+partir de esta pregunta, habría que sumar otras tantas sobre cómo
+actualizar las ciencias sociales que se hacen en las universidades
+públicas y cómo crear audiencias que trasciendan el campus.
+
+Nuevas realidades no sólo precisan otras formas de escribir y comunicar
+las ciencias sociales, también requieren nuevas formas de interpretar la
+realidad social. ¿Y cómo enfrentar este doble reto de renovar tanto las
+formas de comunicar como las miradas a partir de las que las ciencias
+interpretan y explican la sociedad?
+
+Para responder estos cuestionamientos en los siguientes dos apartados
+analizaré cómo los cambios sociales del siglo XXI afectan la teoría
+social (en específico me interesa el proceso de individualización), y
+cómo a partir de estas transformaciones sociales, se debe repensar y
+actualizar la escritura académica, la divulgación de las ciencias
+sociales, así como el punto de partida que se utiliza para comprender y
+explicar la realidad social.
+
+\subsection{La doble vida: entre la academia y la
+divulgación}\label{la-doble-vida-entre-la-academia-y-la-divulgaciuxf3n}
+
+En \emph{Para hablar de la sociedad la sociología no basta} (2019), el
+sociólogo Howard Becker criticó la grisura y uniformidad de las
+explicaciones proporcionadas por las ciencias sociales. En este libro,
+el autor planteó que la mirada científica sólo alcanza a explicar una
+fracción de la realidad por lo que las ciencias sociales están lejos de
+monopolizar el conocimiento de ésta. Lo inabarcable de la realidad
+empuja a los cientistas sociales a complementar las herramientas propias
+de sus disciplinas con los recursos y puntos de partida que ofrecen
+otros campos como el de la fotografía, el cine, el teatro o la novela.
+Sólo recurriendo a otras formas de entender el mundo, escribe Becker, es
+posible aminorar la brecha entre las explicaciones proporcionadas por
+las ciencias sociales y la realidad.
+
+Sin embargo, dicha brecha entre la realidad y las explicaciones
+brindadas por las ciencias sociales no ha dejado de aumentar. Y por
+ello, cada vez más la literatura sirve como una extensión analítica de
+las ciencias sociales que ilumina aquello que desde la limitada mirada
+científica no se logra percibir o narrar.
+
+Algunos cientistas sociales se han percatado de la libertad narrativa
+que se puede obtener a través de la literatura y han incorporado la
+autoetnografía y otros métodos, más cercanos a la antropología que a la
+historia o a la sociología, para analizar y narrar hechos sociales.
+Pareciera que los cientistas huyen de sus disciplinas, de su rol de
+académicos, para escribir la realidad como escritores, perpetuando así
+la doble vida que oscila entre ser investigadores o divulgadores.
+
+Sólo los cientistas sociales más consolidados han podido incorporar
+estos ejercicios de apertura disciplinar a su carrera académica, como en
+el caso de Didier Eribon y su obra \emph{Regreso a Reims} (2015) o Ivan
+Jablonka y su libro \emph{La historia de los abuelos que no tuve}
+(2022).
+
+Un ejemplo reciente que ilustra la existencia del doble rol de
+académico/escritor es el caso de Lea Ypi y su novela \emph{Libre}
+(2023). Lea Ypi, profesora de teoría política en la London School of
+Economics y especialista en marxismo, decidió escribir una novela desde
+la mirada personal para comprender el colapso del régimen comunista en
+Albania a principios de la década de los noventa. Esta novela de
+autoficción combina memorias, historia familiar, análisis político e
+histórico con la finalidad de comprender los mecanismos de control del
+régimen comunista y explicar el contexto en el que se dio la transición
+a la democracia. La obra de Lea Ypi es tanto un recuento íntimo del
+comunismo en Albania como una historia reciente del país balcánico.
+
+Pese a que la novela de Ypi ha sido celebrada internacionalmente por dar
+cuenta del régimen comunista albanés, su labor como cientista social y
+su trabajo como escritora siguen estando totalmente disociados, como si
+se tratase de dos formas completamente distintas de escribir, pensar e
+interpretar la realidad.
+
+Dicha disociación se relaciona en cierta medida con los prejuicios que
+existen sobre el valor de la experiencia subjetiva del mundo y el género
+de la literatura del yo o la autoficción. Y es que como señala el
+escritor y politólogo César Tejeda en su libro \emph{La compulsión
+autobiográfica} la escritura desde el yo se juzga como ``el medio
+inapropiado para representar el mundo simbólicamente, como una moda,
+como un producto del individualismo exacerbado de nuestros tiempos
+{[}\ldots{]}, un acto de exhibicionismo'' (Tejeda 2022: 17).
+
+No le falta razón a Tejeda, sobre todo si recordamos que Enzo Traverso
+publicó \emph{Pasados singulares. El ``yo'' en la escritura de la
+historia} (2022) como reacción a este ``exhibicionismo'' académico. En
+este libro, Traverso plantea que si bien académicos como Richard Hoggart
+o Pierre Bourdieu publicaron sus autobiografías hace varias décadas, en
+los años recientes se ha multiplicado el número de trabajos
+autoetnográficos o autobiográficos dentro de las ciencias sociales. Este
+auge del yo le parece un reflejo de la democratización del ejercicio de
+la escritura (Tejeda 2022: 14) y de un repliegue neoliberal hacia la
+esfera individual (197).
+
+Muchas de las críticas que Traverso plantea a lo largo de su libro son
+acertadas y llaman a que los científicos sociales supervisen mejor sus
+trabajos para que no pierdan rigor al ganar en estilo o subjetividad.
+Sin embargo, me parece que Traverso no repara en la posibilidad de que
+este fenómeno refleje, además de una democratización de la escritura y
+de un individualismo neoliberal, un desplazamiento epistemológico. Es
+decir, quizás el vuelco hacia el yo es síntoma también de una nueva
+forma de comprender el mundo que nos obligaría a renovar las ciencias
+sociales, sus paradigmas, categorías y formas tradicionales de analizar
+la sociedad, que sin duda también podría llevar a una nueva manera de
+concebir la ecología de los saberes.
+
+Danilo Martuccelli y José Santiago apuntan lo siguiente acerca de este
+fenómeno:
+
+\begin{quote}
+El desarrollo contemporáneo del proceso de individualización obliga a
+virar el rumbo de la sociología. Ante él no podemos seguir cerrando los
+ojos y lamentar el lado oscuro que trae consigo: individualismo
+exacerbado, egoísmo, privatización, competencia generalizada entre
+actores. Ni explicarlo únicamente como el fruto de la gestión neoliberal
+del capitalismo. Todo es ello es cierto, pero insuficiente. Nos
+encontramos ante un proceso de mucho mayor alcance que desafía nuestro
+modo de dar sentido y comprender lo social. (Martuccelli and Santiago
+2017: 209).
+\end{quote}
+
+Si aceptamos el planteamiento de estos autores, podemos reconocer la
+necesidad de redirigir la mirada de las ciencias sociales hacia los
+sujetos para valorar sus experiencias de la realidad social y a partir
+de ellas construir una interpretación actualizada de las sociedades
+contemporáneas.
+
+\subsection{La experiencia individual al
+centro}\label{la-experiencia-individual-al-centro}
+
+Desde los primeros debates sobre la Modernidad\footnote{La sociología al
+  ser heredera de la Modernidad ha arrastrado muchos de sus sesgos
+  analíticos y puntos ciegos que han terminado por imponer una manera
+  única y legítima de comprender el mundo, dejando de lado y ocultando
+  otras formas de construir saberes y vínculos con el mundo (Dubet,
+  2011). Es importante no dejar de señalar este sesgo heredado que sigue
+  presente en las ciencias sociales.}, el protagonismo del individuo
+dentro de la teoría social fue innegable y la condena del individualismo
+exacerbado se convirtió en algo común. Sin embargo, el centro de las
+explicaciones de la realidad social no fue necesariamente el individuo
+por mucho que se le pensara como una de las caras que componían la
+sociedad.
+
+Y actualmente, pese a lo mucho que se ha transformado la vida social,
+seguimos explicando o ajustando la realidad a antiguas categorías
+analíticas y a formas específicas de entender la sociedad que no
+engarzan con el presente. Las explicaciones que parten de las
+estructuras y los grandes procesos no necesariamente se corresponden con
+la experiencia subjetiva de esas mismas realidades. Y esto en gran
+medida se debe al proceso de individualización y al hecho de que las
+instituciones tradicionales de la sociedad ya no son los principales
+puntos de orientación.
+
+Hoy la realidad social se construye e interpreta a partir de la mirada
+del sujeto y esto no es bueno ni malo, simplemente es. Y si la distancia
+entre lo vivido y el lenguaje de los analistas no hace más que aumentar,
+es necesario repensar el nexo entre el individuo y la sociedad como
+propone Danilo Martuccelli (2007: 23).
+
+Para subrayar la utilidad de actualizar los puntos de partida analíticos
+de las ciencias sociales y repensar el nexo experiencia
+individual-realidad social, retomaré las reflexiones que algunos
+teóricos sociales han hecho en torno al proceso de individualización,
+las formas de hacer ciencia y la necesidad creciente de poner el foco
+sobre la experiencia individual para interpretar acertadamente nuestro
+tiempo.
+
+Comencemos con las reflexiones de Danilo Martuccelli sobre el proceso de
+individualización en \emph{Gramáticas del individuo} (2007). En este
+libro se retoma el concepto de individualización para plantear que la
+experiencia individual ya no está estandarizada y que las instituciones,
+clases y roles sociales ya no brindan las mismas pautas de orientación.
+A medida que se ha complejizado la sociedad, la relación del sujeto con
+su entorno se ha hecho más difusa, y, si cada vez hay menos estabilidad
+institucional, es necesario volver la mirada al individuo para aclarar
+el sentido de sus acciones y trayectoria (Martuccelli 2007: 24).~Por
+ello, el proceso de individualización es una pieza clave para comprender
+el mundo actual.
+
+El sociólogo Danilo Martuccelli continuó sus investigaciones sobre el
+nexo individuo-sociedad y publicó, en coautoría con José Santiago, el
+libro \emph{El desafío sociológico hoy: individuo y retos sociales}
+(2017). En dicha obra se advierte lo siguiente:
+
+\begin{quote}
+A poco que prestemos atención al incremento espectacular de la
+literatura de autoayuda veremos hasta qué punto existe una fuerte
+demanda social que busca respuestas sobre la imbricación de las
+experiencias individuales con la vida social, que, sin embargo, no es
+atendida por la sociología. (Martuccelli and Santiago 2017: 7).
+\end{quote}
+
+Frente al hecho de que los individuos no cesan de singularizarse y se
+rebelan contra los casilleros sociológicos, los autores proponen la
+construcción de una sociología que parta de las experiencias
+individuales y de cuenta de la sociedad a escala de los individuos
+(8-9).
+
+Esta propuesta busca criticar y complementar la idea de sociedad
+presentada por las teorías del conflicto, la integración, la
+funcionalista y la marxista. Y se acerca en muchos sentidos al
+planteamiento teórico que el sociólogo François Dubet hace en
+\emph{Sociología de la experiencia} (2010). En este texto, Dubet se
+aleja de la sociología clásica y rechaza el planteamiento de que sistema
+y actor son caras (una objetiva y otra subjetiva) de un mismo conjunto
+(2010: 227) y propone en su lugar una ``sociología de la experiencia''.
+
+Dicha sociología de la experiencia consiste en definir la experiencia
+individual como una combinación de las lógicas de acción que vinculan al
+actor a cada una de las dimensiones de un sistema. Y la dinámica
+producida por esta actividad es la que constituye la subjetividad del
+actor y su reflexividad {[}Dubet (2010): 96).
+
+A partir de esta definición de la experiencia como objeto sociológico,
+Dubet ha estudiado, por ejemplo, los significados que tienen para los
+individuos las desigualdades, la discriminación, el resentimiento social
+y otros fenómenos sin dejar de lado cómo se entretejen dichas
+experiencias individuales con los procesos estructurales.
+
+En \emph{El nuevo régimen de las desigualdades solitarias. Qué hacer
+cuando la injusticia se sufre como un problema individual} (2023), Dubet
+pone a prueba una sensibilidad sociológica cercana a la propuesta por
+Martuccelli y Santiago y concluye el libro con la siguiente afirmación:
+``la sociología debería esforzarse por comprender cómo se articulan las
+pruebas individuales y los desafíos colectivos, vinculando
+obstinadamente los extremos de una cadena que parece estar rota: el
+eslabón individualista y el eslabón holista'' (2023: 329).
+
+Estas reflexiones teóricas de Martuccelli, Santiago y Dubet llevan a
+preguntarnos: ¿qué lugar debe ocupar actualmente el individuo en las
+ciencias sociales? Ante esta interrogante, se podría recurrir a lo
+escrito por Guy Bajoit en \emph{El cambio social. Análisis sociológico
+del cambio social y cultural en las sociedades contemporáneas}, obra en
+la que el autor afirma que es imposible comprender y explicar las
+sociedades actuales si no se coloca al individuo al centro de las
+investigaciones (2008: 14).
+
+En \emph{El cambio social}, Bajoit sostiene que ``son las relaciones
+entre los individuos, que buscan construir y realizar su identidad
+personal por sus intercambios, las que permiten comprender la vida
+social'' (2008: 19); y sugiere, en consecuencia, reconstruir la
+sociología alrededor de las capacidades del sujeto (2008: 278).
+
+Hay que advertir que este repliegue hacia lo individual al que se
+refiere Bajoit no implica que el individuo pierda sus dimensiones
+sociales. Al contario, la experiencia individual jamás se agota en el
+sujeto, siempre es social porque, como afirma Jean-Luc Nancy, la
+singularidad es indisociable de la pluralidad (2006, p.~48). En todo
+caso, la labor de las ciencias sociales consistiría en localizar hacia
+dónde se ha desplazado el nexo entre el individuo y la sociedad, entre
+la biografía y los procesos sociales.
+
+Es llamativo el hecho de que estos autores no sólo coincidan en la
+necesidad de virar hacia la experiencia individual para comprender la
+realidad social contemporánea, sino que también consideren que las
+ciencias sociales deben ponerse al servicio de los actores (Bajoit 2008:
+XI; Martuccelli and Santiago 2017: 165-168).
+
+\subsection{Conclusiones}\label{conclusiones}
+
+En este texto se ha analizado los efectos del proceso individuación en
+los presupuestos teóricos de las ciencias sociales y cómo, a partir de
+estos efectos, se puede repensar y actualizar la escritura académica y
+la divulgación científica. Estas reflexiones en torno a la
+individuación, la teoría social, la divulgación y la escritura académica
+pueden propiciar la creación de nuevas agendas de investigación que
+convivan con otras ya consolidadas con el objetivo de dar una mejor
+explicación e interpretación de los fenómenos sociales.
+
+Por lo tanto, debatir las formas de hacer y escribir las ciencias
+sociales aumenta las posibilidades de comunicar efectivamente los
+hallazgos a nuevas audiencias, fomentar un debate público informado y
+avanzar hacia una democratización del conocimiento científico. Dicha
+democratización podría ofrecer a la ciudadanía algunas herramientas
+indispensables para comprender mejor su entorno, decidir sobre sí y
+conocer su margen de acción frente a lo que le afecta personalmente. En
+este sentido, unas ciencias sociales situadas en el presente idealmente
+nos acercarían a una sociedad en la que los individuos entiendan las
+limitantes que ejercen las estructuras sociales sobre sus vidas,
+reconociendo el marco de acción y organización que pueden ampliar y
+modificar.
+
+No se trata únicamente de que los cientistas sociales sean capaces de
+escribir de manera más atractiva sus hallazgos, sino de que se abra la
+posibilidad de buscar nuevos puntos de partida epistemológicos,
+metodológicos, teóricos y escriturales para pensar, explicar y comunicar
+lo social. La propuesta teórico-práctica que planteo aquí tiene el
+propósito enfrentar el reto doble de renovar tanto las formas de
+comunicar las ciencias sociales como los puntos de partida teóricos a
+partida desde los que las ciencias sociales interpretan y explican la
+realidad. Sólo al reflexionar en torno a las dimensiones
+epistemológicas, metodológicas y teóricas del proceso de escritura
+dentro de las ciencias sociales, será posible disminuir la brecha que
+existe actualmente entre las explicaciones proporcionadas por estas
+disciplinas y la realidad social.
+
+\subsection*{Bibliografía}\label{bibliografuxeda}
+\addcontentsline{toc}{subsection}{Bibliografía}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-Bajoit2008}
+Bajoit, G. 2008. \emph{El Cambio Social. {An{á}lisis} Sociol{ó}gico Del
+Cambio Social y Cultural En Las Sociedades Contempor{á}neas}. Espa{ñ}a:
+Siglo XXI.
+
+\bibitem[\citeproctext]{ref-Bauman1997}
+Bauman, Z. 1997. \emph{Legisladores e Int{é}rpretes: {Sobre} La
+Modernidad, La Posmodernidad y Los Intelectuales}. Buenos Aires,
+Argentina: Universidad Nacional de Quilmes.
+
+\bibitem[\citeproctext]{ref-Becker2019b}
+Becker, Howard. 2019. \emph{{Para Hablar de la Sociedad la Sociolog{í}a
+No Basta}}. {Sociolog{í}a y Pol{í}tica Ser}. Ciudad Aut{ó}noma de Buenos
+Aires: Siglo XXI Editores.
+
+\bibitem[\citeproctext]{ref-Bourdieu2009}
+Bourdieu, P. 2009. \emph{Homo Academicus}. Ciudad de M{é}xico, M{é}xico:
+Siglo XXI.
+
+\bibitem[\citeproctext]{ref-Bourdieu2011}
+---------. 2011. \emph{Cuestiones de Sociolog{í}a}. Madrid, Espa{ñ}a:
+Akal.
+
+\bibitem[\citeproctext]{ref-Castells1996}
+Castells, M. 1996. \emph{La Era de La Informaci{ó}n: {Econom{í}a},
+Sociedad y Cultura}. Madrid, Espa{ñ}a: Alianza Editorial.
+
+\bibitem[\citeproctext]{ref-Dubet2010}
+Dubet, F. 2010. \emph{Sociolog{í}a de La Experiencia}. Madrid, Espa{ñ}a:
+Centro de Investigaciones Sociol{ó}gicas.
+
+\bibitem[\citeproctext]{ref-Dubet2023}
+---------. 2023. \emph{El Nuevo r{é}gimen de Las Desigualdades
+Solitarias. {Qu{é}} Hacer Cuando La Injusticia Social Se Sufre Como
+Problema Individual}. Buenos Aires, Argentina: Siglo XXI.
+
+\bibitem[\citeproctext]{ref-Eribon2015}
+Eribon, D. 2015. \emph{Regreso a Reims}. Buenos Aires, Argentina: Libros
+del Zorzal.
+
+\bibitem[\citeproctext]{ref-Jablonka2022}
+Jablonka, I. 2022. \emph{La Historia de Los Abuelos Que No Tuve}.
+Barcelona, Espa{ñ}a: Anagrama.
+
+\bibitem[\citeproctext]{ref-Jacoby2000}
+Jacoby, R. 2000. \emph{The Last Intellectuals: {American} Culture in the
+Age of Academe}. Estados Unidos: Basic Books.
+
+\bibitem[\citeproctext]{ref-Lyotard2019}
+Lyotard, J.-F. 2019. \emph{La Condici{ó}n Posmoderna. {Informe} Sobre El
+Saber}. Madrid, Espa{ñ}a: C{á}tedra.
+
+\bibitem[\citeproctext]{ref-Martuccelli2007a}
+Martuccelli, D. 2007. \emph{Gram{á}ticas Del Individuo}. Buenos Aires,
+Argentina: Losada.
+
+\bibitem[\citeproctext]{ref-Martuccelli2017}
+Martuccelli, D., and J. Santiago. 2017. \emph{El Desaf{í}o Sociol{ó}gico
+Hoy: Individuo y Retos Sociales}. Madrid, Espa{ñ}a: Centro de
+Investigaciones Sociol{ó}gicas.
+
+\bibitem[\citeproctext]{ref-RealAcademiaEspanola2014}
+Real Academia Española. 2014. {``Diccionario de La Lengua Espa{ñ}ola.''}
+
+\bibitem[\citeproctext]{ref-Tejeda2022}
+Tejeda, C. 2022. \emph{La Compulsi{ó}n Autobiogr{á}fica}. Monterrey,
+M{é}xico: Alacrana y Universidad Aut{ó}noma de Nuevo Le{ó}n.
+
+\bibitem[\citeproctext]{ref-Ypi2023}
+Ypi, L. 2023. \emph{Libre}. Barcelona, Espa{ñ}a: Anagrama.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}

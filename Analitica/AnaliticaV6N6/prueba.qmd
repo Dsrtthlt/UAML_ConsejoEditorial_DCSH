@@ -1,0 +1,88 @@
+Guía para autores: Propósito y uso de esta plantilla
+
+Esta plantilla no es un modelo de apariencia, sino un dispositivo estructural diseñado para facilitar la edición académica. Su función es garantizar que su manuscrito se integre de forma automática, accesible y reproducible en los flujos editoriales de la revista.
+
+¿Cómo usarla?
+
+1\. Reemplace el texto de ejemplo por su contenido.
+
+2\. Mantenga los estilos aplicados (por ejemplo, Normal, Título 2, Resumen, Leyenda, Referencias).
+
+3\. No modifique formatos manualmente (negritas, colores, sangrías): todo el diseño formal será aplicado posteriormente por el equipo editorial.
+
+¿Por qué esta plantilla?
+
+• Asegura consistencia: todos los artículos comparten la misma estructura semántica.
+
+• Facilita la conversión: permite transformar su manuscrito a PDF, HTML o XML sin pérdida de información.
+
+• Promueve accesibilidad: evita dependencias visuales (como el color) y respeta buenas prácticas editoriales.
+
+Esta plantilla está protegida para que solo pueda usar los estilos necesarios. Esto no limita su autoría, sino que la encauza hacia un formato interoperable y sostenible.
+
+Al terminar
+
+\- Elimine esta guía antes de enviar su manuscrito.
+
+\- Guarde el archivo como .docx.
+
+Esta plantilla forma parte de un flujo editorial basado en estándares abiertos (Quarto, Zotero, OJS) que busca maximizar la circulación crítica del conocimiento.
+
+**\
+**
+
+**Título del artículo en español**
+
+Subtítulo del artículo en español
+
+*Article title in English*
+
+Article subtitle in English
+
+Nombre completo del autor \| Afiliación institucional completa
+
+**RESUMEN**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+**PALABRAS CLAVE: palabra1; palabra2; palabra3**
+
+**ABSTRACT**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+
+**KEYWORDS: keyword1; keyword2; keyword3**
+
+# Apartado 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+![Instrucciones para generar un pie de imagen: 1. Insete la imagen. 2 Haga click derecho en la imagen -\> "Edit Alt Text" o "Ver Texto Alternativo". 3. En el campo o ventana que se abre, escribir la descripción. El texto no será visible pero aparecerá en la conversión que hará el equipo editorial. Ver imagen siguiente para identificar la ventana donde se escribe el texto alternativo.](media/image1.png){width="6.295833333333333in" height="2.9381944444444446in"}
+
+Instrucciones para generar un pie de imagen: 1. Insete la imagen. 2 Haga click derecho en la imagen -\> "Edit Alt Text" o "Ver Texto Alternativo". 3. En el campo o ventana que se abre, escribir la descripción. El texto no será visible pero aparecerá en la conversión que hará el equipo editorial. Ver imagen siguiente para identificar la ventana donde se escribe el texto alternativo.
+
+![](media/image2.png){width="6.295833333333333in" height="3.517361111111111in"}
+
+# Apartado 2
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+: kjgfljf,jkgcñkfcljgv.khvljvhb-nmkhckvkñjgfdsgzxcvnkñ. lifdkhgcvñkfldfj
+
+Las tablas se generan usando el menú de Word o copiándolas de Excel. Como en el caso de las imágenes, su pie de imagen o descripción se genera dando doble click a la tabla y seleccionando la opción "Propiedades de la tabla" -\> "Texto alternativo". Ver la próxima imagen para identificar el menú.
+
+![](media/image3.png){width="6.295833333333333in" height="6.218055555555556in"}
+
+# Apartado 3
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+
+*Figura 1. Descripción breve de la figura. Elaboración propia.*
+
+# Referencias
+
+Apellido, A. (2020). Título del libro o artículo. \*Nombre de la revista\*, volumen(número), páginas.

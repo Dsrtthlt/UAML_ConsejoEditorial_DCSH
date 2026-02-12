@@ -1,0 +1,15 @@
+# Archivos generados
+*.html
+*.pdf
+*.docx
+_site/
+*.knit.md
+
+# Entornos R
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+
+# Zotero temporales (si sincroniza en la carpeta)
+*.zotero-ft-cache

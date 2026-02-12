@@ -1,0 +1,1195 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{interact}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\setcounter{page}{60}
+\usepackage{etoolbox}
+\AtBeginEnvironment{table}{\footnotesize}
+\AtBeginEnvironment{longtable}{\footnotesize}
+\usepackage{orcidlink}
+\input{/Users/omarperezbanos/Documents/Github/UAML_ConsejoEditorial_DCSH/Analitica/AnaliticaV6N6/estilo-revista.tex}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Ensayo sobre un pódcast de investigación sociológica},
+  pdfauthor={Fernando Beltrán Nieves},
+  pdfkeywords={Sociología, Pódcast, Guion, Técnica de interrupción},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Ensayo sobre un pódcast de investigación sociológica}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Sociological Research Podcast: An Analytical Essay on Its
+Conceptual Design and the Audio Ecosystem}
+\author{Fernando Beltrán Nieves \textbar\ \textbar\ 
+Universidad Autónoma Metropolitana, Unidad Lerma}
+
+
+\thanks{CONTACTO: \href{mailto:efebve@gmail.com}{efebve@gmail.com}.}
+\begin{document}
+\captionsetup{labelsep=space}
+\maketitle
+
+
+\newcommand{\articuloTitulo}{Podcast de investigación sociológica}
+
+\begin{footnotesize}
+\textbf{Resumen}
+
+Este ensayo discute el diseño conceptual de un pódcast de investigación sociológica. Sitúa este diseño en un marco general de adaptaciones recientes que han tenido lugar en el intercambio entre las Ciencias Sociales y el ecosistema del audio. Explora la técnica de interrupción como escritura de guiones provenientes de investigaciones documentales en el campo de la Sociología. Esta técnica yuxtapone inscripciones disímiles en un solo lugar. Una técnica para lidiar al mismo tiempo con estructuras narrativas, la reflexión teórica y las variantes de la interrupción. Aplica esta técnica en un ejercicio contrafactual sobre la vida universitaria de Karl Marx. En las conclusiones se resalta la experimentación que ofrece el ecosistema del audio, subraya la pertinencia de diseños múltiples y compactos como canales de divulgación-difusión de las investigaciones académicas, y destaca que estos diseños permiten salir del tradicional circuito de especialistas y navegar aerodinámicamente por el ecosistema cultural actual.
+
+\textbf{Palabras clave}
+
+Sociología, Podcast, Guión, Técnica de interrupción
+\end{footnotesize}
+
+\newpage
+
+\begin{footnotesize}
+\textbf{Abstract}
+
+This essay discusses the conceptual design of a sociological research podcast, situating it within a framework of recent adaptations in the exchange between the Social Sciences and the audio ecosystem. It explores the technique of interruption as a scriptwriting method derived from documentary research in Sociology, which juxtaposes disparate inscriptions in a single space. This technique simultaneously addresses narrative structures, theoretical reflection, and variants of interruption. The essay applies this technique in a counterfactual exercise reconstructing Karl Marx’s university life. In the conclusions, the experimental potential of the audio ecosystem is emphasized, underscoring the relevance of compact and multifaceted designs as dissemination channels for academic research. These designs are highlighted for their capacity to transcend traditional specialist circuits and navigate dynamically through the current cultural ecosystem, offering new pathways for knowledge transmission.
+
+\textbf{Keywords}
+
+Sociology, Podcast, Script, Interruption technique
+\end{footnotesize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Introducción}\label{introducciuxf3n}
+
+El ecosistema del audio de nuestro tiempo ha venido participando con
+gran intensidad en las reglas de producción e intercambios de bienes
+culturales en la galaxia internet. Definen a este ecosistema el registro
+de la voz o de las voces, la intervención del sonido y una posproducción
+esmerada posterior. En este sentido el audio contemporáneo es un medio
+de exigencia técnica como conceptual. Los intercambios entre la voz y el
+sonido son múltiples y experimentales, rasgos característicos de la
+expansión de este ecosistema particular. En dicho ecosistema convergen
+además audiencias segmentadas. La escucha es ultra individual y se da
+por medio de los auriculares. Además, la conexión al ecosistema es
+posible gracias a los teléfonos personales inteligentes. Este ecosistema
+particular es un medio vertiginoso, en permanente redefinición, de
+amplio interés para las audiencias que nacieron en ambientes digitales y
+rondan los veinte años. El ecosistema del audio ha expandido sus usos y
+su influencia en una época de ``cansancio visual'' (Carrión 2020) . Se
+afirma también que es una ``época de oro'' para los
+productores-creadores de sonido (Farra 2020). Estos señalamientos y
+configuraciones recientes del ecosistema del audio han posibilitado
+nuevas y no tan nuevas interrogantes de investigación en materia de
+Ciencias Sociales. En este sentido elaboramos ahora preguntas
+relativamente distintas con respecto al pasado más inmediato. Solemos
+ahora cuestionarnos a qué suenan las cosas o los espacios que nos
+gustan. Nos interrogamos también a qué suenan las Ciencias Sociales de
+nuestro tiempo o cómo están interactuando los departamentos de
+investigación académica con el ecosistema del audio.
+
+Estas formulaciones muestran a un ecosistema del audio en mutación
+constante. La conversación y, en menor medida la narración, circulan con
+abundancia en el audio. No todo, sin embargo, puede desplegarse en el
+medio. ¿Cómo funciona la reflexión teórica o la ensayística en el audio?
+¿Qué clase de diseños de texto, de divulgación-difusión y diseños
+sonoros logran potenciar el formato clásico de una investigación en
+materia de Ciencias Sociales? ¿Cómo investigamos o escribimos para ser
+escuchados? ¿Cuáles son las mejores condiciones o los mejores ambientes
+---además de unos audífonos apropiados o una banda ancha de conexión---
+para transmitir una investigación sociológica? Algunas respuestas
+satisfactorias necesitan primeramente delinear con mayor precisión la
+trayectoria general del ecosistema del audio.
+
+\section{Un ecosistema en
+expansión}\label{un-ecosistema-en-expansiuxf3n}
+
+Un entramado de dispositivos tecnológicos y aplicaciones conectados a
+internet que se actualizan con vértigo ha creado un sofisticado
+ecosistema cultural global. En el pasado bastaba quizá un boletín
+impreso, una revista periódica, la publicación de un libro, la
+asistencia a una conferencia magistral para informarnos, comunicarnos,
+estudiar o leer. En este ecosistema cultural global, por el contrario,
+rige la híper-velocidad, los algoritmos creativos, la viralidad, la
+ligereza, los contenidos híbridos y compactos, la inteligencia
+artificial, la espectacularidad. En su ensayo sobre la mutación cultural
+de nuestra época, Alessandro Baricco ofrece una panorámica de esta
+``lógica bárbara'' que domina el ecosistema cultural global: ``la
+superficie en vez de la profundidad, la velocidad en vez de la
+reflexión, las secuencias en vez del análisis, el \emph{surf} en vez de
+la profundización, la comunicación en vez de la expresión, el
+\emph{multitasking} en vez de la especialización, el placer en vez del
+esfuerzo'' (Baricco 2006: epílogo). En suma, hablamos del
+``\emph{storytelling}'' de la civilización digital. Además, vivimos
+ahora una época multicanal. Una sensación de obligatoriedad de estar en
+todos los canales, en todas las frecuencias, en todas las plataformas.
+Las mensajerías instantáneas y las redes sociales, por lo demás, son las
+autopistas que juzgamos indispensables para informarnos, comunicarnos,
+entretenernos, estudiar y leer.
+
+El audio, además, se ha configurado en una galaxia particular del más
+vasto ecosistema cultural global. Dispositivos como iPhones, Siri, Apple
+Podcasts, Alexa, WhatsApp, Spotify, Telegram, etcétera, protagonistas
+visibles y poderosos del ecosistema del audio, han ido reconfigurando el
+rostro y el ritmo de nuestros intercambios de bienes culturales. Las
+innovaciones al interior del ecosistema del audio y, en innumerables
+ocasiones, la sustitución del mensaje de texto por el mensaje de audio
+en las mensajerías instantáneas incrustadas en los teléfonos
+inteligentes personales, son aspectos indiscutibles del protagonismo de
+esta galaxia particular.
+
+En este sentido puede entenderse el impulso de la legendaria productora
+radiofónica londinense, BBC, la cual está propugnando por sustituir la
+noción de radio por el de audio y televisión por el de pantalla
+(Espinosa de los Monteros 2021). Spotify es un caso global que sintetiza
+la relevancia del audio dentro del ecosistema cultural global. Entró al
+mercado estadounidense en 2014. Spotify instaló una innovación que poco
+a poco logró estabilizar la escucha ultra individual de música por medio
+de la suscripción, disponible a todo momento. Empujado por la pandemia
+Covid-19, Spotify se concentró en 2020 en el universo del pódcast,
+desplazando a la librería de audios hasta entonces la más importante en
+el mundo anglosajón: Apple Podcast, antes iTunes. Con Spotify en escena,
+circulan fuertes sumas de inversiones, contratos espectaculares, ofertas
+originales de contenido (Leijonhufvud and Carlsson 2021). \emph{Caso 63}
+es el ejemplo paradigmático en el idioma español (Studios Spotify 2020;
+Beltrán-Nieves 2024). Habremos tardado en verlo de la siguiente manera:
+Spotify es al pódcast lo que Netflix es a las series de televisión. Esta
+apuesta es relevante porque a diferencia de la música, repetitiva y
+convencional, el pódcast presume supuestos contenidos originales y o de
+calidad.
+
+De la amplia gama de objetos culturales que se producen, navegan y se
+consumen en nuestra actualidad, este ensayo se concentra en un fragmento
+preciso: el diseño de audios listos para su descarga o escucha
+ultra-individual. Este fragmento lo conocemos también como los pódcast,
+que son archivos de audio en su expresión más simple, pero en el fondo
+son diseños de textos, diseños de divulgación-difusión y diseños sonoros
+en su forma. Los pódcast son diseños múltiples y han ido expandiendo sus
+usos, sus posibilidades y sus fronteras. Interesa investigar con mayor
+detenimiento la interacción de la investigación en materia de Ciencias
+Sociales con el ecosistema del audio.
+
+\section{Objetos híbridos, diseños
+múltiples}\label{objetos-huxedbridos-diseuxf1os-muxfaltiples}
+
+Según el crítico catalán Jorge Carrión, el pódcast es un ``objeto
+cultural vagamente identificado'' (Carrión 2019). OCVI en efecto como un
+nuevo acrónimo en nuestra dieta cultural. Además de los pódcast, según
+Carrión, nutren el especto de los OCVI los artefactos narrativos, las
+listas de reproducción, los vídeos cortos, las obras negras, las
+visualizaciones de análisis de datos, los \emph{tweets} e hilos de
+\emph{tweets}. Esta clase de objetos buscan ser artísticos o
+conceptuales, pero también divulgación-difusión. O a la inversa. Objetos
+de divulgación-difusión que buscan ser artísticos o conceptuales.
+``Objetos culturales vagamente identificados'' que circulan a grandes
+velocidades por la galaxia internet.
+
+El pódcast es un artefacto híbrido. Diseño, concepto y
+divulgación-difusión son áreas mucho más fluidas en el ecosistema del
+pódcast. Una escritura para ser escuchada, la pluralidad de las voces,
+el sonido, los efectos del sonido, la gráfica y, ahora también, el uso
+múltiple de la inteligencia artificial, cohabitan o se empalman en los
+pódcast que surfean aerodinámicamente por las plataformas de audio y las
+redes sociales.
+
+Es indudable que el diseño, el concepto y la divulgación-difusión fueron
+interconectados originalmente por la radio. Durante un siglo la radio
+confirmó los usos múltiples de los guiones escritos, la voz o las voces
+y los efectos de sonido. Radionovelas, experimentos radiofónicos,
+radioteatro y apertura del medio a los creadores de vanguardia (Barea
+2002: 18) fueron innovaciones que el nuevo medio en el entonces avanzó
+con base sobre todo en las tradiciones literarias y cinematográficas,
+configurándose muy rápidamente en una tradición radiofónica propiamente
+dicha. Diseños provenientes de la radio que la televisión más adelante
+heredó, se apropió y exploró ciertamente en sus inicios, pero se
+estancaron con sus versiones comerciales posteriores, repetitivas y
+convencionales.
+
+Al reflexionar el nuevo medio durante la década de 1920, Bertolt Brecht
+distinguió dos problemáticas distintas: \emph{1)} el uso del arte por
+parte de la radio y \emph{2)} el uso de la radio por parte del arte
+(Brecht 2003: 8). Dos intereses distintos que, según Brecht, debían
+coindicir en una posibilidad compartida: la finalidad pedagógica. En la
+época de expansión de la radio, Brecht enseguida le asestó una dura
+crítica a la necesidad de saciar el hambre de contenidos. ``De repente
+---escribió Brecht--- se tuvo la posibilidad de decirlo todo a todos,
+pero, bien mirado, no se tenía nada que decir'' (Brecht 2003: 12). Decir
+cualquier cosa a cualquiera es una crítica brechtiana que pone en
+suspenso el generalizado recogocijo que va de suyo con el crecimiento
+del ecosistema de los pódcast. Porque, bien mirado, basta un micrófono y
+una cabina doméstica de grabaciones para que cualquiera diga cualquier
+cosa, circule y se disperse en el ecosistema. Ruido, barullo, conflicto
+de la interpretación circula también, y en abundancia, en el ecosistema
+contemporáneo del audio.
+
+En sus apuntes sobre la radio, además, Brecht rogaba inmediatamente por
+el diseño de un medio que comunicara realmente. Una tecnología para que
+el globo terráqueo encontrara intercambio entre todas las voces. Brecht
+estaba inquieto por la escasa inversión en la radio pública berlinesa,
+por la calidad de los contenidos, artísticos e inteligentes y, marxista
+de suyo, por la difusión masiva de los contenidos. Y finalizaba algún
+pasaje sobre la radio: ``Un hombre que tiene algo que decir y no
+encuentra oyentes, está en una mala situación. Pero todavía están peor
+los oyentes que no encuentran quien tenga algo que decirles'' (Brecht
+2003: 6).
+
+¿No es esta incógnita la que el ecosistema del pódcast ha creído
+finalmente despejar?
+
+Los traslapes en el ecosistema del audio acontecen con mayor naturalidad
+en contraste con lo que ocurría en el pasado. La radio de ahora se
+rediseña con los pódcast en escena, los pódcast mutan en programas de
+radio o en diseños gráficos y las ficciones sonoras son adaptadas en
+pantalla. Pablo Fischer (2021) distingue incluso entre adaptaciones y
+traducciones en el intercambio, cada vez más generalizado, entre las
+ficciones sonoras y las series de televisión.
+
+El ecosistema del pódcast se ha afianzado, además, porque el audio es un
+ambiente sonoro personalizado. Una personalidad afincada en tres
+tradiciones distintas pero compatibles: no sólo la radiofónica, desde
+luego, sino en una tradición literaria y otra cinematográfica (Espinosa
+de los Monteros 2020). La radiofónica respalda el poder de la voz o de
+las voces. La literaria confirma la fascinación por las historias y la
+cinematográfica, entre otros aspectos, valida el atractivo y la
+complejidad de los planos de la imagen o los ángulos del sonido.
+
+Este ecosistema ha impulsado la idea de que el medio garantiza el
+derecho a hablar y a ser escuchado. Este ecosistema ha construido la
+idea de que el pódcast es una expresión democrática: está en potencia al
+alcance de los creadores y está disponible para los escuchas afines.
+Este ecosistema sostiene que las relaciones entre los productores y los
+usuarios son flexibles, son horizontales e interactivas. De tal suerte
+que las relaciones son mucho más abiertas y participativas de lo que
+ocurrió con la radio. La autoridad y las jerarquías no desaparecen,
+desde luego, pero no se desenvuelven de forma vertical ni
+unilateralmente. Es cierto que los requerimientos, las condiciones y el
+conocimiento aplicado para lograrlo no se distribuyen de manera
+universal. La ausencia de una conexión estable a internet o la de un
+teléfono inteligente destruirían esta rebosante idea generalizada.
+
+El pódcast en este sentido es ``tribal'' (Espinosa de los Monteros
+2021), de unos pocos a más, de horizonte potencial. Se estabiliza en
+comunidades que buscan contenidos particulares que difícilmente la radio
+convencional, ya no digamos la televisión tradicional, producen
+cotidianamente. En este sentido el pódcast se asienta mucho más
+eficazmente en comunidades específicas: libreros(as), escritoras(es),
+guionistas, artistas, bibliotecarios(as), estudiantes,
+investigadores(as), departamentos universitarios. El ecosistema del
+audio en suma conecta potencialmente con redes específicas de individuos
+a través de sus teléfonos inteligentes desperdigados en todo el globo.
+
+Desde el punto de vista de los usuarios, la disponibilidad del
+ecosistema del pódcast es la experiencia de escuchar
+\emph{anytime}-\emph{anywhere} una emisión a la carta. Pero para los
+productores o creadores, más importante aún, este ecosistema es una
+respuesta a la necesidad de generar contenido específico, en flujo
+constante, múltiple, diverso u original en el mejor de los casos, para
+abrir otros canales de conversación, difusión-divulgación e intercambio.
+Es una respuesta a la sentida necesidad de abrir canales específicos,
+temáticos, porque sentimos las presiones de una ``época multicanal''.
+Una expectativa o una posibilidad que la radio ha dejado en suspenso de
+tiempo atrás porque en su práctica cotidiana ha optado por la
+producción, gestión y difusión de contenido informativo, repetitivo y
+convencional, apto para todos en teoría. El usuario del ecosistema del
+pódcast, finalmente, puede adelantar o retroceder contenido, puede
+ajustar la velocidad de reproducción o puede seleccionar también los
+segmentos al interior del episodio por medio de las tablas de contenido.
+
+\section{Motivaciones de
+apropiación}\label{motivaciones-de-apropiaciuxf3n}
+
+El pódcast como concepto o como diseño se encuentra en mutación
+constante, en rediseño permanente. El pódcast se expande y tiene sed de
+contenidos. La conversación, y en menor medida la narración, circulan
+con abundancia en el audio. No todo sin embargo puede hacerse en el
+medio. ¿Cómo podría funcionar la reflexión teórica o la ensayística en
+el pódcast? Una adaptación fiel o inmediadta de un postulado teórico al
+audio es posible, sin duda, pero estaríamos hablando formalmente de un
+audiolibro. Frente a estas disyuntivas o imposibilidades, la emergencia
+del pódcast académico ha sido una respuesta plausible del ecosistema. El
+pódcast académico, difundido en inglés como ``\emph{podcast scholar}'',
+ha dejado de ser una rareza de dicho ecosistema (Beltrán Nieves and Páez
+2023). En redefinición persistente, el pódcast académico revive
+cuestiones sobre las tecnologías de la palabra, los intercambios con la
+escritura, el diseño sonoro y el diseño de ``contenidos serios'' para
+escuchar. Con esta clase de innovaciones e intercambios en circulación
+ha quedado en el pasado el ámbito de la lectura aislada o arrinconada en
+las salas silenciosas de los recintos universitarios y la escritura, por
+su parte, ha dejado de ser un ejercicio solitario en algún lugar cómodo
+de la habitación. Nuestra ``humanidad aumentada'' (Baricco 2019), la
+extensión de todos nuestros sentidos, se diversifica aún más con el
+ecosistema del audio en expansión.
+
+El pódcast académico problematiza el diseño apropiado para abrir nuevos
+senderos y puertos para la investigación académica. Una preocupación por
+el diseño que es también una discusión sobre el diseño sonoro. Hablamos
+en suma de un diseño complejo para lograr un contacto afuera del
+tradicional circuito de especialistas. O también, no menos importante,
+para abrir otros canales de difusión e intercambio entre los
+especialistas y públicos afines. Esto es así porque uno de los desafíos
+más apremiantes del ecosistema cultural de nuestro tiempo es cómo
+conectar con audiencias más amplias o audiencias más específicas o cómo
+lograr una comunicación efectiva. Pero de igual modo cómo encarar los
+retos de nuestro siglo: cómo interactuar artística y humanamente con la
+inteligencia artificial.
+
+El uso de técnicas narrativas por lo menos en la exposición de los
+resultados de las investigaciones que se realizan es un modo recurrente
+para lidiar con el ecosistema del audio. Son investigaciones que han
+sido regularmente clasificadas como investigación de corte cualitativo o
+a profundidad. Entre los géneros más habituales se encuentran
+biografías, ensayos y relatos, entrevistas, testimonios e intervenciones
+públicas. Esta propiedad textual, conceptualizada como ``narratividad''
+(Lagmanovich 2013), favorece su traducción o adaptación auditiva. Una
+posibilidad en términos de locución y sonoridad, componentes
+fundamentales de la ``audicidad'' (Beltrán Nieves and Páez 2022) de una
+escritura específica. Cuando planteamos la relación entre la
+investigación en materia de Ciencias Sociales y el audio nos referimos a
+esta traducción, intercambio o adaptación de una escritura para ser
+escuchada. El concepto de ``audicidad'' (Beltrán Nieves and Páez 2022:
+247-48) refiere, por una parte, a las dimensiones audibles y sonoras de
+un guion escrito, así como a los montajes posteriores entre la
+escritura, la voz o las voces y los planos del sonido. Por otra parte,
+este concepto refiere a los encuentros posteriores entre el archivo de
+audio, las plataformas digitales de audio y la apropiación de la escucha
+ultra individual por medio de los auriculares personales.
+
+Los intercambios habituales entre las investigaciones en materia de
+Ciencias Sociales y el ecosistema del audio buscan una redirección
+auditiva para diversos ejercicios o tentativas. Entre otros, sin orden
+de importancia: \emph{1)} los de reflexión individual o colectiva;
+\emph{2)} los de documentación de los hallazgos; \emph{3)} los de
+crónica de los procesos simultáneos de toda investigación; \emph{4)} los
+de licencia para disentir; y \emph{5)} los de las valoraciones de los
+resultados (Beltrán Nieves and Páez 2022: 248). Sin embargo, ¿qué
+diseños de texto, de divulgación-difusión y de sonido son adecuados para
+las investigaciones que se realizan en materia de Ciencias Sociales?
+Desde el punto de vista del diseño estricto, dos son los diseños
+fundamentales: \emph{1)} el protagonismo de la voz o de las voces o
+\emph{2)} la interacción de la voz o de las voces con el sonido en
+distintos planos de intervención. El ``audio-artículo'' (UAM-Lerma
+(Universidad Autónoma Metropolitana-Unidad Lerma) 2021) es un ejemplo
+del primer diseño y la ``ficción académica sonora'' (FES-Acatlán
+(Facultad de Estudios Superiores Acatlán) 2022, 2023) lo es del segundo.
+Entre ambas posibilidades existe de por medio un rango experimental de
+matices. Finalmente, los diseños fundamentales, ya advertidos, se alzan
+con base en guiones o soportes escritos, salvo los pódcast llamados
+``libres'', que prescinden del soporte textual. ¿Existe en el horizonte
+otro modo de diseño y ejecución? Para ofrecer una respuesta plausible a
+esta interrogante, quisiéramos detenernos en la ``técnica de
+interrupción''. Una figura sobre la que Maurice Blanchot, Bertolt Brecht
+y Ricardo Piglia han reflexionado y usufructuado, cada autor a su
+manera, usos y diversas posibilidades.
+
+\section{La interrupción}\label{la-interrupciuxf3n}
+
+Maurice Blanchot ha pensando la interrupción como figura teórica,
+operador de lectura y categoría metodológica (Blanchot 2008). La
+interrupción es una pausa que permite al habla convertirse en
+conversación. La interrupción es una grieta o señal que posibilita la
+interlocución, la continuidad (o no) del habla. Blanchot lo expresa de
+este modo: ``la pausa que permite el intervalo; la espera que mide la
+distancia infinita'' (2008, p.~98). En este sentido la lengua auténtica,
+según Blanchot, es la lengua de la ``locura, el error y la estupidez''.
+La interrupción es entonces una pausa, fisura, intervalo, para
+introducir las diferencias, la ``diferencia infinita'', la infinidad de
+posibilidades, la ``discontinuidad'', lo desconocido. ¿Qué clase de
+discontinuidades o diferencias? Digresiones, abismos, repliegues,
+cumbres, vueltas. Con esta noción de interrupción, según Blanchot, no
+puede darse la ``unidad de un discurso coherente''. La narrativa o el
+hilo de lo que se cuenta, por su parte, puede ser interrumpida en
+cualquier lugar. Existe en ella algo así como una potencialidad latente
+de interrupción. No hay narración sin reflexión. No hay narrativa sin
+dialéctica. La ironía, por ejemplo, según Blanchot, descompone estos dos
+tropos habituales de la escritura literaria.
+
+Otra clase de interrupción se da en la experiencia lectora. El lector se
+interrumpe para desenmarañar (o no) el sentido de lo que lee. Un lector
+ha leído durante un tiempo y entonces se detiene, se interrumpe, duerme.
+La interrupción funciona aquí como una ruptura de la expectativa de
+lectura. Hay otra clase de interrupción producida por la fatiga o el
+cansancio. Una sentida necesidad de cortar de tajo las páginas que se
+leen.
+
+El escritor argentino Ricardo Piglia, por su parte, reflexionó en
+algunos momentos sobre la interrupción como una técnica específica. Esta
+técnica de intervención, según Piglia, fue apropiada por Bertolt Brecht
+como un modo crítico de producción artística. En atención a Brecht,
+según Piglia, la interrupción es una técnica o un instrumento de trabajo
+para vincular dos inscripciones disímiles en un mismo lugar. Un modo de
+``crear una realidad'' con base en dos registros disímiles pero
+entretejidos, intercalados o yuxtapuestos. ``Discurso doble, poner un
+texto dentro de otro, no por alusión, sino por doble inscripción de lo
+escrito'' (Piglia 2015a: 294). En la técnica de interrupción son
+fundamentales el corte narrativo y la yuxtaposición. Un modo de poner
+los traslapes en escena, hacerlos visibles, propiamente audibles.
+
+Si bien el ``teatro épico'' del dramaturgo alemán estuvo enmarcado de
+modo general en el ``efecto de extrañamiento'' (Brecht 2019: §45, 47) un
+efecto teorizado originalmente por el formalismo ruso, la interrupción
+forma parte de los recursos de su ejecución. Brecht lo buscaba
+afanosamente en múltiples niveles. ``Extrañamiento'' entre \emph{1)} el
+dramaturgo y la realidad social; \emph{2)} el plan general de la obra y
+la escena-escena; \emph{3)} el actor y el personaje; \emph{4)} lo
+musical, la mímica y la coreografía; \emph{5)} el desempeño actoral, el
+público y la obra representada. En consideración de los espectadores, el
+efecto lo buscaba Brecht al romper la ilusión del escenario teatral a
+través de una ``escenografía no realista'' o al poner en suspenso la
+identificación inmediata con los personajes por medio del uso de
+máscaras o maquillaje exagerado para resaltar su artificialidad. La
+interrupción en Brecht, además, operaba con la incorporación de
+letreros, carteles o textos para avanzar algún dato histórico en la
+representación o mediante estructuras narrativas no cronológicas o no
+lineales o, asimismo, vía la introducción de coros musicales en momentos
+exaltados de la obra. Un ``efecto de extrañamiento'' para asestar una
+crítica a las problemáticas político-sociales abordadas en el escenario.
+``Para Brecht modificar los procedimientos {[}dominantes{]} que regulan
+la producción artística {[}v. gr. la mimesis, la ilusión o la
+identificación{]} es un modo de intervenir específicamente ---a nivel
+del lenguaje y de los usos sociales de la significación--- en la lucha
+de clases'' (Piglia 2015b: 68-69).
+
+Sobre variantes de la interrupción, finalmente, vale señalarse que, al
+analizar espacios ``difíciles'' como la escuela, las habitacionales o
+las urbanizaciones, Pierre Bourdieu (1999) pensó la yuxtaposición de un
+modo similar a la de Brecht: es necesario el abandono del punto de vista
+dominante, neutro o único. Espacios ``difíciles'' donde los individuos
+se encuentran ciertamente pero donde todo los separa. Para inspeccionar
+estos espacios, según Bourdieu, es insuficiente atender cada uno de los
+puntos de vista, sino que se trata de ``poner de manifiesto, por el mero
+efecto de la yuxtaposición, lo que resulta del enfrentamiento de
+visiones del mundo diferentes o antagónicas'' (1999, p.~9). Estas
+yuxtaposiciones tienen su \emph{raison d'être} en la estructura misma
+del mundo social.
+
+En atención a lo expuesto aquí sobre las variaciones de la interrupción,
+se trata ahora de definir un modo de intervenir \emph{1)} la narración,
+\emph{2)} la reflexión conceptual y \emph{3)} lo ``discontinuo'' ---en
+términos de Blanchot--- para los fines de un pódcast de investigación
+sociológica. Narración, reflexión e inscripciones disímiles en un mismo
+lugar constituirían un diseño híbrido, un diseño múltiple, un ``objeto
+cultural vagamente identificado''.
+
+\section{Un pódcast de investigación
+sociológica}\label{un-puxf3dcast-de-investigaciuxf3n-socioluxf3gica}
+
+A diferencia de otros pódcast académicos donde la ``ficción sonora''
+asume un rol protagónico (Fes Acatlán 2022, 2023), el diseño de un
+pódcast de investigación sociológica que aquí se expone mantiene una
+relación discreta con los planos de sonido. Los episodios de esta
+iniciativa inspeccionan una serie de autores clásicos que contribuyeron
+decisivamente al despegue de la Sociología. Marx, Engels, Durkheim,
+Simmel, Weber, Parsons. Aunque sobre estos clásicos se ha escrito
+indudablemente muchísimo, siguen formulándose interrogaciones sujetas a
+la investigación de archivo o la investigación teórica. Son autores tan
+fascinantes, además, que toda una agenda de investigación puede
+plantearse en términos de rastrear minucias o huellas sobre las que la
+crítica se ha detenido poco o pasa rápido sobre ellas. Son relatos
+compactos que entretejen momentos biográficos con dimensiones del
+contexto de producción de la obra teórica. Relatos breves, huellas,
+marcas, microhistorias poco visitadas o desconocidas sobre los teóricos
+que se juzgan decisivos. Para conectar aquí lo dicho sobre la técnica de
+interrupción con el diseño de un pódcast de investigación sociológica es
+conveniente mostrar una escaleta sencilla de un guion de locución. La
+escaleta es un instrumento gráfico bastante extendido en las cabinas de
+grabaciones. Si bien sus diseños son diversos, su utilidad reside en
+reconocer el orden preciso de las voces: quién habla, qué se dice
+exactamente, cuánto dura lo que se dice, así como precisar el orden de
+intervención del sonido, pausas, transiciones o silencios.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\caption{Técnica de interrupción como diseño de locución. Elaboración
+propia}\tabularnewline
+\toprule\noalign{}
+\endfirsthead
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& \textbf{Secuencia} & \textbf{Voz} & \textbf{Sonido} &
+\textbf{Contenido / Propósito} & \textbf{Duración} \\
+& 01 & & Introducción & Reconocimiento de apertura & 10'\,' \\
+& 02 & Anfitrión(a) Disparador & & Presentación y objetivo del episodio
+& 30 a 45'\,' \\
+& 03 & & Transición & Pausa & 5'\,' \\
+Técnica de interrupción & 04 & Narrador(a) Analista & Voces y
+ambientación & Conflicto & +10' \\
+& 05 & Comentarista & Voces y ambientación & Clímax & +10' \\
+& 06 & Aprendiz de sociólogo(a) & Voces y ambientación & Aceleración del
+conflicto & +10' \\
+& 07 & & Transición & Pausa & 5'\,' \\
+& 08 & Anfitrión(a) & & Conclusión del episodio & 2' \\
+& 09 & & Salida & Reconocimiento de salida & 10'\,' \\
+& 10 & Créditos & Cortinilla institucional & & 1' \\
+& Total & & & & 15' \\
+\end{longtable}
+
+El cuadro 1. ``Técnica de interrupción como guion de locución'' muestra
+una escaleta compuesta de 10 secuencias de intervención. Las filas de la
+tabla identifican las secuencias y las columnas distribuyen el contenido
+y los propósitos de dicho contenido: las voces, quién dice qué, la
+duración medida según convenga en segundos (doble comillas) o minutos
+(una comilla) y la intervención del sonido. Las secuencias 01, 02, 03,
+08, 09 y 10 son típicas entradas y salidas generales de cualquier
+programa radiofónico o de cualquier pódcast del ecosistema. Las
+secuencias 04, 05 y 06, en cambio, son los planos donde la técnica de
+interrupción tiene lugar. Tipificadas como ``narrador(a)'',
+``analista'', ``comentarista'' y ``aprendiz de sociólogo(a)'', estas
+voces interactuan o se entretejen las veces que se juzgan necesarias
+hasta agotar o abandonar el objeto de discusión.
+
+Una historia que contar irrumpe como una vibración particular que
+produce un ``campo magnético a su alrededor'' (Baricco 2023: 4). Las
+historias que se cuentan, entonces, se estructuran regularmente mediante
+la presentación de un conflicto, el clímax del conflicto y la
+aceleración del conflicto o eventual resolución. Otras veces se edifican
+mediante una noción rudimentaria de introducción, desarrollo y
+conclusión de lo que se desea contar.
+
+En este diseño propuesto la secuencia opera del siguiente modo: el
+narrador comienza a narrar, pero es interrumpido por el analista quien
+\emph{1)} matiza, acompaña o reflexiona al narrador o \emph{2)} trae a
+cuento un registro teórico o variante: cita, aforismo, reflexión
+conceptual. Y el analista, a su vez, o es interrumpido por el
+comentarista quien dialoga con el analista o es cortado por el aprendiz
+de sociólogo(a) quien introduce ``lo discontinuo'': una duda, una
+\emph{boutade}, una reformulación innecesaria, un \emph{no sense}, una
+afirmación apresurada o escandalosa, un extranjerismo. Es la
+interrupción para volver a comenzar. El narrador retoma la narración y
+la técnica de interrupción vuelve a operar. No se trata de un mecanismo
+de intervención rígido o inmutable, sino flexible y adaptativo al
+conflicto de lo que se cuenta o a la trayectoria del argumento central.
+Este mecanismo, las secuencias 04, 05 y 06, funciona indefinidamente
+hasta interrumpirse o concluir.
+
+Vale resaltar el despliegue de la voz del ``aprendiz de sociólogo(a)'':
+radicaliza la técnica de interrupción, introduce explícitamente ``lo
+discontinuo'' en términos de Blanchot. Esta voz se nutre del
+``\emph{storytelling}'' de la civilización digital: dispersa el sentido
+``profundo de las cosas'', desritualiza lo sagrado, actúa con ligereza y
+superficialidad, introduce el idioma inglés: en efecto, se trata del
+``\emph{storytelling}'' de la civilización digital (Baricco 2006, 2019).
+En síntesis, esta voz singular es una decisión fundamental en el diseño
+de un pódcast de investigación sociológica. Es el plano sonoro para
+conectar dos mundos distintos: los protagonistas fundamentales de la
+teoría sociológica y la cultura digital. Un gesto pensado también para
+salir de los diseños habituales del ecosistema del pódcast: o
+conversacionales o narrativos.
+
+Interesa mostrar enseguida la puesta en práctica de la técnica de
+interrupción como diseño ejecutable de un pódcast de investigación
+sociológica. Un usuario conecta con una Inteligencia Artificial llamada
+\emph{Milagros}, generadora de esbozos narrativos. La IA le sugiere al
+usuario formular el prompt y enseguida sobreviene una narración que
+atiende la inquietud. El usuario pide a la IA que incorpore en el relato
+lo mucho o poco que sabe al respecto para sentirse cerca de la
+discusión. Las voces que intervienen son las siguientes: Milagros IA de
+esbozos narrativos, usuario, narrador, analista, comentarista y aprendiz
+de sociólogo(a), que no es sino la transmutación del usuario en el
+relato. Se trata de un esbozo referido al período berlinés de la vida
+universitaria de Karl Marx\footnote{Para documentar dicho período
+  {[}1835-1843{]} fueron consultados Attali (2019), Duque (1999), Dussel
+  (2008), Hegel (2011), Marx (1987), McLellan (1977); Pérez Soto (2010,
+  2015, 2019) y Uroeva (2017).}
+
+\section{Contrafactual sobre Karl
+Marx}\label{contrafactual-sobre-karl-marx}
+
+\begin{quote}
+Sonido ambiente: se enciende una sofisticada interfaz digital y
+escuchamos un sonido positivo de bienvenida.
+\end{quote}
+
+\textbf{Milagros}. Bienvenido, bienvenida, bienvenide, acabas de
+encender \emph{Milagros}, una Inteligencia Artificial generadora de
+esbozos narrativos. Estoy diseñada para ayudarte en tus inquietudes
+formativas.
+
+\textbf{Usuario}. Mmm, hola, vaya. ¿Cómo funciona?
+
+\textbf{Milagros}. Formula el prompt y en instantes escucharás un relato
+justo a tu medida.
+
+\textbf{Usuario}. Bueno, Milagros, ¡yo soy marxista!
+
+\textbf{Milagros}. ¡Me alegro!, en estos días que corren ya no pululan
+los marxistas.
+
+\textbf{Usuario}. Bueno, mira, yo\ldots{} yo no estoy tan seguro de qué
+pasaba cuando Marx entraba y salía de la Universidad de Berlín. Me
+gustaría descubrir algo sorprendente.
+
+\textbf{Milagros}. Te sugiero entonces formular: ¿qué hubiera pasado si
+la Universidad de Berlín hubiera incorporado a Marx en su plantilla
+docente? y en instantes te proporcionaré el relato que deseas escuchar.
+
+\textbf{Usuario}. ¿Un ejercicio contrafáctico sobre Karl Marx? Vaya, ¡me
+encanta!
+
+\textbf{Milagros}. Los ejercicios contrafactuales buscan despertar la
+curiosidad sobre las relaciones entre el pasado, nuestro presente y el
+futuro. ¿Qué hubiera pasado si\ldots? es el punto de partida para
+plantear un ejercicio contrafactual.
+
+\textbf{Usuario}. Esta clase de esgrima intelectual no es habitual en
+las Ciencias Sociales.
+
+\textbf{Milagros}. Son ejercicios que siembran la duda sobre cómo se
+encadenaron los hechos que sucedieron. Redimensionan el peso de un
+componente, una pieza individual del amplio rompecabezas, para imputarle
+a la historia un cauce distinto a lo que ocurrió en verdad.
+
+\textbf{Usuario}. ¿Milagros?
+
+\textbf{Milagros}. ¿Deseas algo más?
+
+\textbf{Usuario}. Sí, bueno, me gustaría\ldots{} ¿cómo decirlo? Me
+gustaría que yo aparezca también en el relato.
+
+\textbf{Milagros}. Generando una respuesta.
+
+\begin{quote}
+Sonido ambiente: sonido de transición a una dimensión desconocida.
+\end{quote}
+
+\textbf{Narrador}. Cuando Karl Marx entraba y salía de la Universidad de
+Berlín, estaba sucediendo una de las batallas filosóficas más
+significativas de la primera mitad del siglo XIX.
+
+\textbf{Analista}. El saldo final de esta querella, adelantémoslo de una
+buena vez, fue la declarada bancarrota de Hegel, el filósofo cumbre de
+la época.
+
+\textbf{Narrador}. Muchos años después de esta polémica, en uno de sus
+prólogos a \emph{El Capital}, Marx recordaba cómo a Hegel se lo trataba
+todavía como ``perro muerto''. Corría el año de 1873 y el juicio
+lapidario pesaba todavía sobre la filosofía de Hegel.
+
+\textbf{Analista}. Por tal razón, en un arrebato de defensa o de
+indignación, Marx se declaró discípulo de Hegel. Esta afiliación de Marx
+redobla hasta nuestro presente el deseo de desterrar a Hegel o de
+ahogarlo en el silencio. O más habitual todavía: de criticarlo sin
+leerlo.
+
+\textbf{Aprendiz de sociólogo / Usuario}. \emph{I mean}, para el
+entendimiento de los mortales\ldots{} los contemporáneos envidiosos de
+Hegel lo declararon muerto y, de paso, a todos sus \emph{mega fans},
+Marx incluido. \emph{Is that right}?
+
+\textbf{Narrador}. Al poco tiempo de la muerte del profesor Hegel
+sobrevinieron las del ministro de Cultura y la del Rey absoluto de
+Prusia. Entonces el nuevo ministro de Federico Guillermo IV encendió las
+alarmas con la efervescencia de las interpretaciones radicales sobre
+Hegel de toda una nueva generación.
+
+\textbf{Analista}. Muerto Hegel el 14 de noviembre de 1831, subió de
+tono la disputa por su interpretación. Entre quienes resaltaban la
+filosofía de Hegel como una teología sofisticada y quienes la leían, en
+cambio, para criticarla o radicalizar sus razonamientos más
+sorprendentes u oscuros. No sólo era una encarnizada lucha de ideas
+filosóficas, sino un enfrentamiento entre generaciones. Una lucha por la
+definición material de la filosofía por medio del acceso a las cátedras
+universitarias o de su control.
+
+\textbf{Aprendiz de sociólogo / Usuario}. Me pregunto qué hubiera dicho
+el profesor Hegel sobre esta declarada bancarrota del filósofo Hegel.
+
+\textbf{Analista}. Se hubiera escabullido por el pasillo sin responder.
+
+\textbf{Aprendiz de sociólogo / Usuario}. \emph{Whyyyy}?!
+
+\textbf{Analista}. Porque\ldots{} La filosofía llega siempre tarde.
+Cuando la filosofía pinta con sus tonos grises ya ha envejecido una
+figura de la vida que sus penumbras no pueden rejuvenecer, sino sólo
+conocer.
+
+\textbf{Aprendiz de sociólogo / Usuario}. ¿Y dicho menos
+filosóficamente?
+
+\textbf{Analista}. Los méritos de cada bando los hubiera visto con
+escepticismo o desconfianza. A cada bando, en todo caso, lo hubiera
+visto como un momento de lo verdadero en busca de algo más. Así como el
+búho de Minerva sólo emprende el vuelo al anochecer, Hegel hubiera
+preferido aguardar hasta la madurez de la disputa para conceptualizar,
+delinear y explicar.
+
+\textbf{Narrador}. El nuevo ministro en funciones convino entonces en la
+contratación del viejo filósofo Schelling para desterrar explícitamente
+la filosofía de Hegel y, sobre todo, a los hegelianos de la Universidad
+de Berlín. Antiguo amigo de Hegel, Schelling se tomó el tiempo de espera
+y programó su clase inaugural justamente en la conmemoración de la
+muerte de Hegel. Schelling expuso aquella vez una sentencia paradójica:
+la metafísica especulativa en boga (léase Hegel) es reaccionaria y
+subversiva. A esta clase inaugural asistieron Engels, Bakunin y
+Kierkegaard.
+
+\textbf{Analista}. Con Schelling en escena se instaló rápidamente un
+clima asfixiante para los jóvenes profesores hegelianos. Bauer, el
+asesor de tesis de Marx, devino exégeta de textos bíblicos. Feuerbach,
+de quien Marx tomó una imagen distorsionada sobre Hegel, se fue al campo
+a criar gallinas. Y Marx no tuvo ninguna opción en Berlín y se fugó para
+siempre de ahí.
+
+\textbf{Aprendiz de sociólogo / Usuario}. ¿Qué hubiera pasado si la
+Universidad de Berlín hubiera incorporado a Marx a su cuerpo docente?
+
+\textbf{Analista}. Sin duda se hubiese convertido en otro gran filósofo
+especulativo alemán, pero quizá no hubiera formulado uno de sus
+problemas filosóficos exquisitos de juventud.
+
+\textbf{Aprendiz de sociólogo / Usuario}. \emph{Which is?}
+
+\textbf{Narrador}. El problema de si al pensamiento humano se le puede
+atribuir una verdad objetiva.
+
+\textbf{Analista}. Este problema no es un problema teórico, sino un
+problema práctico. Porque es en la práctica donde el hombre tiene que
+demostrar la verdad, es decir, la realidad y el poderío, la terrenalidad
+de su pensamiento. El litigio sobre la realidad o irrealidad de un
+pensamiento que se aísla de la práctica es un problema puramente
+escolástico.
+
+\textbf{Aprendiz de sociólogo / Usuario}. Con bonito sabor a alguna
+tesis sobre Feuerbach.
+
+\textbf{Narrador}. ¿Qué hubiera pasado si la Universidad de Berlín
+hubiera incorporado a Marx a su cuerpo docente?, es una interrogante que
+pertenece al terreno de lo contrafactual.
+
+\textbf{Aprendiz de sociólogo / Usuario}. ¿Qué hubiera pasado? Fácil:
+¡la Revolución Rusa no hubiera sucedido!
+
+\textbf{Comentarista}: \emph{Excuse me?}
+
+\textbf{Analista}. La Revolución Rusa necesitó de Marx, sin duda, pero
+necesitó igualmente de otras piezas significativas. Por ejemplo, que
+Engels, sin respiro, organizara, reescribiera y publicara durante los
+últimos 10 años de su vida, buena parte de los manuscritos, las notas de
+trabajo y borradores de Marx. O que los populistas rusos lectores de
+Marx, Lopatin y Danielson, tradujeran al ruso \emph{El Capital}.
+
+\textbf{Narrador}. Fue la primera traducción de \emph{El Capital} en
+aparecer y a circular en 1872.
+
+\textbf{Analista}. Marx es necesario para el estallido de la Revolución
+Rusa, diríamos, pero no suficiente.
+
+\textbf{Narrador}. Clausuradas las opciones en la Universidad de Berlín,
+Marx se doctoró en la Universidad de Bonn. Poco después, sin empleo y
+recién casado con Jenny von Westphalen, partió a Francia en 1843. Fueron
+los años donde murió una legítima aspiración, pero iniciaba con vértigo
+la pasión revolucionaria.
+
+\textbf{Comentarista}. Durante los primeros años de 1840, Marx se alejó
+para siempre de la carrera académica, pero escribió notables argumentos
+filosóficos. La mayoría de ellos no fueron publicados en vida de Marx.
+Entre los más célebres, las ``Tesis sobre Feuerbach'', \emph{La
+ideología alemana} o los \emph{Manuscritos económico-filosóficos} de
+1844.
+
+\begin{quote}
+Sonido ambiente: sonido de transición de salida de una dimensión
+desconocida.
+\end{quote}
+
+\textbf{Milagros}. Acabas de escuchar: \emph{Milagros: generadora IA de
+esbozos narrativos. Un pódcast de investigación sociológica}. Episodio
+uno: \emph{Contrafactual sobre Karl Marx}.
+
+\begin{quote}
+Sonido ambiente: sonido de desconexión.
+\end{quote}
+
+\section{Conclusiones}\label{conclusiones}
+
+El pódcast es un artefacto híbrido. Diseño, concepto y
+divulgación-difusión son áreas mucho más fluidas en el ecosistema del
+pódcast. Una escritura para ser escuchada, la pluralidad de las voces,
+el sonido, los efectos del sonido, la gráfica y, ahora también, el uso
+múltiple de la inteligencia artificial, cohabitan o se empalman en los
+pódcast que surfean aerodinámicamente por las plataformas de audio y las
+redes sociales.
+
+Los pódcast en materia de Ciencias Sociales se han estado convirtiendo
+en medios de producción, gestión y difusión de la investigación que se
+realiza. En este sentido los pódcast de esta naturaleza problematizan el
+diseño apropiado para abrir nuevos senderos y puertos para los objetos
+de investigación. Una apuesta por el diseño que es también una discusión
+simultánea por el diseño sonoro. Al igual que otros objetos culturales
+de nuestra época, los pódcast académicos están definidos por rasgos que,
+con la experimentación y la concurrencia, comienzan a estabilizarse en
+distintos contextos o escenarios de la galaxia internet. Hablamos en
+suma de un diseño complejo para lograr un potencial contacto afuera del
+tradicional circuito de especialistas.
+
+Sin embargo, los diseños fundamentales suelen ser narrativos o
+conversacionales, siguiendo de cerca guiones o soportes escritos. Este
+ensayo buscó justamente otro modo de ejecución y diseño. En efecto, en
+atención a lo tratado en este ensayo sobre las variaciones de la
+interrupción, se propuso la definición de un modo de intervenir
+\emph{1)} la narración, \emph{2)} la reflexión conceptual y \emph{3)} lo
+``discontinuo'' ---en términos de Blanchot--- para los fines de un
+pódcast de investigación sociológica. Narración, reflexión e
+inscripciones disímiles en un mismo lugar constituirían un diseño
+híbrido, un diseño múltiple, un ``objeto cultural vagamente
+identificado''. Un diseño apropiado para navegar aerodinámicamente por
+la galaxia internet.
+
+Finalmente, resaltamos el despliegue de la voz del ``aprendiz de
+sociólogo(a)'' en el contrafáctico sobre Karl Marx, propuesto en este
+ensayo. Esta voz materializa la técnica de interrupción, introduce ``lo
+discontinuo'' en términos de Blanchot. Esta voz particular se nutre del
+``\emph{storytelling}'' de la civilización digital: dispersa el sentido
+``profundo de las cosas'', desritualiza lo sagrado, actúa con ligereza y
+superficialidad, introduce el idioma inglés. Es justamente una
+encarnación del ``\emph{storytelling}'' de la civilización digital. Es
+una decisión fundamental en el diseño de un pódcast de investigación
+sociológica. Es también el plano sonoro para conectar dos mundos
+distintos: los protagonistas de la teoría sociológica clásica y la
+cultura digital. Un gesto pensado para salir de los diseños habituales
+del ecosistema del pódcast, conversacionales o narrativos.
+
+\section*{Bibliografía}\label{bibliografuxeda}
+\addcontentsline{toc}{section}{Bibliografía}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-attali2019}
+Attali, Jacques. 2019. \emph{Karl Marx o El Espíritu Del Mundo}. Fondo
+de Cultura Económica.
+
+\bibitem[\citeproctext]{ref-Barea2002}
+Barea, Pilar. 2002. {``Bertolt Brecht y La Radio.''} \emph{Assaig de
+Teatre: Revista de l'associació d'investigació i Experimentació
+Teatral}, no. 35: 1328.
+
+\bibitem[\citeproctext]{ref-Baricco2006}
+Baricco, Alessandro. 2006. \emph{Los Bárbaros. Ensayo Sobre La
+Mutación}. Anagrama.
+
+\bibitem[\citeproctext]{ref-Baricco2019}
+---------. 2019. \emph{The Game}. Anagrama.
+
+\bibitem[\citeproctext]{ref-baricco2023}
+---------. 2023. \emph{La Vía de La Narración}. Anagrama.
+
+\bibitem[\citeproctext]{ref-Beltrannieves2022}
+Beltrán Nieves, Fernando, and Luis Páez. 2022. {``Podcasting, Ensayo
+Conceptual de Un Diseño.''} \emph{Sociológica (México)} 37 (106):
+227260.
+\url{http://www.sociologicamexico.azc.uam.mx/index.php/Sociologica/article/view/1723/1783}.
+
+\bibitem[\citeproctext]{ref-Beltrannieves2023}
+---------. 2023. {``Audio-Acá. Ensayo Sobre El Pódcast Académico.''}
+\emph{Razón y Palabra} 27 (117): 5669.
+\url{https://www.revistarazonypalabra.org/index.php/ryp/article/view/2056}.
+
+\bibitem[\citeproctext]{ref-BeltranNieves2024}
+Beltrán-Nieves, Fernando. 2024. {``Investigaciones Tecno-Especulativas
+Sobre La Oralidad.''}
+\url{https://fernandobeltrannieves.com/investigaciones-tecno-especulativas-sobre-la-oralidad/}.
+
+\bibitem[\citeproctext]{ref-Blanchot2008}
+Blanchot, Maurice. 2008. \emph{La Conversación Infinita}. Arena Libros.
+
+\bibitem[\citeproctext]{ref-bourdieu1999}
+Bourdieu, Pierre. 1999. {``El Espacio de Los Puntos de Vista.''} In,
+edited by Pierre Bourdieu, 910. Fondo de Cultura Económica.
+
+\bibitem[\citeproctext]{ref-Brecht2003}
+Brecht, Bertolt. 2003. {``Teoría de La Radio (1927{\textendash}1933).''}
+\emph{Revista de Economía Política de Las Tecnologías de La Información
+y de La Comunicación} 5 (2): 516.
+
+\bibitem[\citeproctext]{ref-Brecht2019}
+---------. 2019. \emph{Breviario de Estética Teatral}. Editorial libre.
+
+\bibitem[\citeproctext]{ref-Carrion2019}
+Carrión, Jorge. 2019. {``Un Nuevo Canon Cultural En Diez Objetos.''}
+\url{https://bit.ly/47vW29j}.
+
+\bibitem[\citeproctext]{ref-Carriuxf3n2020}
+---------. 2020. {``Las Series Se Pixelan.''}
+\url{https://bit.ly/30EKcft}.
+
+\bibitem[\citeproctext]{ref-duque1999}
+Duque, Félix. 1999. \emph{La Restauración. La Escuela Hegeliana y Sus
+Adversarios}. Akal.
+
+\bibitem[\citeproctext]{ref-dussel2008}
+Dussel, Enrique. 2008. {``5 de Mayo de 1818: Nace Karl Marx.''}
+\url{https://www.jornada.com.mx/2008/05/04/index.php?section=politica&article=015a1pol}.
+
+\bibitem[\citeproctext]{ref-Espinosadelosmonteros2020}
+Espinosa de los Monteros, María José. 2020. {``El Podcast, Una Nueva
+Forma de Contar Historias.''} \url{https://bit.ly/4dq5gFP}.
+
+\bibitem[\citeproctext]{ref-Espinosadelosmonteros2021}
+---------. 2021. {``Clase 8. Guion. Periodismo Narrativo En Pódcast.''}
+
+\bibitem[\citeproctext]{ref-Farra2020}
+Farra, Rodrigo. 2020. {``A Qué Suenan Las Marcas.''}
+\url{https://www.marketingdirecto.com/punto-de-vista/la-columna/a-que-suenan-las-marcas}.
+
+\bibitem[\citeproctext]{ref-FES2022}
+FES-Acatlán (Facultad de Estudios Superiores Acatlán). 2022. {``Los
+Desiertos de La Tierra {[}Pódcast{]}.''} \url{https://bit.ly/3MXcuHC}.
+
+\bibitem[\citeproctext]{ref-FES2023}
+---------. 2023. {``El Espacio Vital {[}Pódcast{]}.''}
+\url{https://bit.ly/3BUsBiG}.
+
+\bibitem[\citeproctext]{ref-Fischer2021}
+Fischer, Pablo. 2021. {``Escucha Podcast. Reseñas de Podcast En Español,
+38.''}
+\url{https://mailchi.mp/9b5b0e297c17/escucha-podcast-38?e=56b932ba0a}.
+
+\bibitem[\citeproctext]{ref-hegel2011}
+Hegel, G. W. F. 2011. \emph{Principios de La Filosofía Del Derecho. O
+Derecho Natural y Ciencia Política}. Random House.
+
+\bibitem[\citeproctext]{ref-Lagmanovich2013}
+Lagmanovich, David. 2013. \emph{Abismos de La Brevedad. Seis Estudios
+Sobre El Microrrelato}. Universidad Veracruzana.
+
+\bibitem[\citeproctext]{ref-Leijonhufvud2021}
+Leijonhufvud, Jonas, and Sven Carlsson. 2021. \emph{Spotify. Cómo Una
+Startup Sueca Ganó La Batalla Del Audio Frente a Apple, Google y
+Amazon}. Random House.
+
+\bibitem[\citeproctext]{ref-marx1987}
+Marx, Karl. 1987. \emph{La Ideología Alemana}. Grijalbo.
+
+\bibitem[\citeproctext]{ref-mclellan1977}
+McLellan, David. 1977. \emph{Karl Marx. Su Vida y Sus Ideas}. Grijalbo.
+
+\bibitem[\citeproctext]{ref-puxe9rezsoto2010}
+Pérez Soto, Carlos. 2010. {``Clase 1 {[}Vídeo{]}. Historia Del
+Marxismo.''}
+\url{http://sicarioinfernal.blogspot.com/2011/11/clases-historia-del-marxismo-carlos.html}.
+
+\bibitem[\citeproctext]{ref-puxe9rezsoto2015}
+---------. 2015. {``Brevemente Marx. Curso Clásicos Del Pensamiento
+Social: Marx.''}
+\url{https://es.scribd.com/document/285999831/Perez-Soto-Carlos-Brevemente-Marx}.
+
+\bibitem[\citeproctext]{ref-puxe9rezsoto2019}
+---------. 2019. \emph{Sobre La Relación Entre Hegel y Marx}. LOM
+Ediciones.
+
+\bibitem[\citeproctext]{ref-piglia2015}
+Piglia, Ricardo. 2015b. \emph{Los Diarios de Emilio Renzi. Los Años
+Felices}. Anagrama.
+
+\bibitem[\citeproctext]{ref-piglia2015a}
+---------. 2015a. \emph{Los Diarios de Emilio Renzi. Los Años Felices}.
+Anagrama.
+
+\bibitem[\citeproctext]{ref-Studiosspotify2020}
+Studios Spotify. 2020. {``Caso 63 {[}Pódcast{]}.''}
+\url{https://spoti.fi/3HgkHRC}.
+
+\bibitem[\citeproctext]{ref-UAM2021}
+UAM-Lerma (Universidad Autónoma Metropolitana-Unidad Lerma). 2021. {``El
+Infierno Es La Mirada de Los Otros. Sábato a La Luz de La Crítica
+{[}Pódcast{]}.''} \url{https://bit.ly/45dhFK6}.
+
+\bibitem[\citeproctext]{ref-uroeva2017}
+Uroeva, Anna. 2017. {``La Primera Traducción En Rusia.''} \emph{Los
+Trabajos y Los Días} 9 (6/7): 67106.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
