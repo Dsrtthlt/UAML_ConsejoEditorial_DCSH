@@ -1,0 +1,80 @@
+---
+  title: "Entrevista a Rurik German List Sánchez"
+subtitle: ""
+abstract: ""
+keywords:
+  - Lorem
+- Ipsum
+- Dolor
+author:
+  - name: "Ignacio López Moreno"
+degree: "Dr.; Profesor investigador del Departamento de Procesos Sociales"
+affiliation: "Universidad Autónoma Metropolitana, Unidad Lerma"
+email: "i.lopez@correo.ler.uam.mx"
+corresponding: true
+journal-name:
+  - name: "An@lítica"
+url: "http://revista-csh.ler.uam.mx/index.php/rda"
+issn: "XXXX-XXXX"
+date: "2026-01-28"
+volume: "7"
+number: "7"
+received: ""
+accepted: ""
+published: ""
+doi: ""
+format:
+  html:
+  lang: es
+theme: 
+  light: lux
+dark: darkly
+toc: true
+number-sections: false
+date-format: "[Última actualización] DD, MMMM, YYYY"
+tandf-pdf:
+  number-sections: false
+toc: false
+lof: false
+lot: false
+include-in-header: 
+  text: |
+  \setcounter{page}{96}
+keep-tex: true
+citation:
+  type: article-journal
+container-title: "An@litica"
+url: http://revista-csh.ler.uam.mx/index.php/rda/about
+page-first: "96"
+page-last: "123"
+google-scholar: true
+---
+
+\newcommand{\articuloTitulo}{Entrevista a Ririk German List Sánchez}
+
+\begin{footnotesize}
+\textbf{Semblanza}
+
+Rurik List es un biólogo de la conservación dedicado al estudio de la ecología y conservación de carnívoros y mamíferos en riesgo de extinción. Ha sido pionero en el estudio de especies como la zorra del desierto, el cacomixtle, el puercoespín norteño, el bisonte y el ajolote del Lerma. Ha trabajado en la reintroducción del hurón de patas negras, el lobo mexicano y el bisonte, así como en la identificación y protección de áreas prioritarias para la conservación. Ha participado del desarrollo de diversas estrategias para la conservación de especies y ecosistemas. Convencido de que solo con la colaboración de la población se podrán afrontar los problemas ambientales, dedica buena parte de su tiempo a la divulgación mediante conferencias, artículos y apoyándose en la fotografía, que es una de sus pasiones. Es miembro del Área Académica en Biología de la Conservación de la Universidad Autónoma Metropolitana-Lerma.
+
+El objetivo de la entrevista es dar a conocer la diversidad de la práctica científica a través de entrevistas abiertas que rescaten la vida y devenir de personas relevantes de las ciencias sociales.
+
+\textbf{Palabras clave}
+
+Biología de la conservación, reintroducción de especies, divulgación pública
+\end{footnotesize}
+
+\newpage
+
+\begin{footnotesize}
+\textbf{Biographical Sketch
+Rurik List is a conservation biologist dedicated to the study of the ecology and conservation of carnivores and endangered mammals. He has been a pioneer in researching species such as the desert fox, ringtail, northern hedgehog, bison, and Lerma axolotl. His work includes reintroduction programs for the black-footed ferret, Mexican gray wolf, and bison, as well as identifying and protecting priority areas for conservation. He has contributed to the development of diverse strategies for species and ecosystem preservation. Convinced that addressing environmental challenges requires community collaboration, he dedicates significant time to public outreach through lectures, articles, and photography—a passion he combines with his scientific work. He is a member of the Academic Unit in Conservation Biology at the Universidad Autónoma Metropolitana-Lerma (UAM-Lerma).
+
+The purpose of this interview is to highlight the diversity of scientific practice by documenting the life trajectories and contributions of prominent figures in the sciences.
+
+\textbf{Keywords}
+
+Conservation Biology, Species Reintroduction, Public Outreach
+\end{footnotesize}
+
+# Entrevista
