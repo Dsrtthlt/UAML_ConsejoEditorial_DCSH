@@ -1,15 +1,23 @@
-# Archivos generados
-*.html
+# Archivos generados (excluir de versionado)
+*.tex
 *.pdf
 *.docx
-_site/
+*_files/
 *.knit.md
+_site/
+
+# macOS
+.DS_Store
+
+# Google Drive temporales (¡crucial!)
+.tmp.driveupload/
 
 # Entornos R
 .Rhistory
 .RData
 .Rproj.user/
-renv/library/
+renv/
 
-# Zotero temporales (si sincroniza en la carpeta)
+# Zotero cachés (NO bibliography.bib)
 *.zotero-ft-cache
+zotero.sqlite*
