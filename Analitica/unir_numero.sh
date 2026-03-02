@@ -1,6 +1,7 @@
 #!/bin/bash
 qpdf --empty --pages \
-  Legal_Analiticav6n6.pdf \
+  portada_Analitica_v_n_.pdf
+  legal_Analitica_v_n_.pdf \
   editorial.pdf \
   art01.pdf \
   art02.pdf \
@@ -8,4 +9,4 @@ qpdf --empty --pages \
   art04.pdf \
   art05.pdf \
   art06.pdf \
-  -- An@lítica_V6N6_completo.pdf
+  -- An@lítica_v_n_completo.pdf
