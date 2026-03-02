@@ -2,7 +2,7 @@
 title: "Entrevista a Eduardo Restrepo"
 subtitle: ""
 abstract: ""
-keywords:
+keywords: ""
 author:
   - name: "Ignacio López Moreno"
     degree: "Dr.; Profesor investigador del Departamento de Procesos Sociales"
