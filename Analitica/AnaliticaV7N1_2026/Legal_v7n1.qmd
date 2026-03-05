@@ -3,13 +3,13 @@ title: ""
 format:
   pdf:
     include-in-header:
-      - estilo-legal.tex
+      - estilos/estilo-legal.tex
     header-includes: |
-      \newcommand{\numero}{$6$}
-      \newcommand{\volumen}{$6$}
+      \newcommand{\numero}{$7$}
+      \newcommand{\volumen}{$1$}
       \newcommand{\anio}{$2026$}
       \newcommand{\issn}{$XXXX-XXXX$}
-      \newcommand{\size}{1.2mb}
+      \newcommand{\size}{0.0mb}
     toc: false
     number-sections: false
 ---

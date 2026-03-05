@@ -33,8 +33,9 @@ contributes:
         # Add here the resources required for the PDF rendering
         - interact.cls
         - orcidlink.sty
+      csl: apa-6th-edition-es.csl
     html:
       # define default configuration for the html version of your format
       toc: true
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/apa-6th-edition-no-ampersand
+      csl: apa-6th-edition-es.csl

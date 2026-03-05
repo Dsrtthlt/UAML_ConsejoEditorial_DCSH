@@ -17,7 +17,7 @@ format:
 \begin{titlepage}
     \noindent
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
-    Vol. 6, No. 6 & enero-marzo de 2026 & ISSN: XXXX-XXXX
+    Vol. 1. No. 1 & \textbf{NUEVA ÉPOCA} & ene-mar 2026
 \end{tabular*}
     \vspace{0.5cm}
     \noindent

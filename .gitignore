@@ -21,3 +21,5 @@ renv/
 # Zotero cachés (NO bibliography.bib)
 *.zotero-ft-cache
 zotero.sqlite*
+/.quarto/
+**/*.quarto_ipynb

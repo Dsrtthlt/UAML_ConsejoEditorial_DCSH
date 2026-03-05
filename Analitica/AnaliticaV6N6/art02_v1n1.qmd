@@ -32,7 +32,9 @@ format:
     toc: true
     number-sections: false
     date-format: "[Última actualización] DD, MMMM, YYYY"
+    csl: apa-6th-edition-es.csl
   tandf-pdf:
+    fig-caption: false
     number-sections: false
     toc: false
     lof: false
@@ -48,7 +50,7 @@ citation:
   page-first: "29"
   page-last: "46"
 google-scholar: true
-bibliography: art02.bib
+bibliography: art02_v1n1.bib
 nocite: |
   @Sued2022
 ---
@@ -62,7 +64,7 @@ Este artículo expone una propuesta metodológica que permite conocer la influen
 
 \textbf{Palabras clave}
 
-Comunicación académica, Algoritmos, Visibilidad
+Comunicación Académica, Algoritmos, Visibilidad
 \end{footnotesize}
 
 \newpage
@@ -74,7 +76,7 @@ This article introduces a methodological proposal designed to assess the influen
 
 \textbf{Keywords}
 
-Academic communication, Algorithms, Visibility
+Academic Communication, Algorithms, Visibility
 \end{footnotesize}
 
 ------------------------------------------------------------------------
@@ -93,7 +95,7 @@ El crecimiento acelerado y constante de contenidos en internet ha colocado a los
 
 ¿Quién no se ha detenido a googlear o buscar en redes sociales el nombre propio de una persona o el suyo mismo para conocer o recuperar algún tipo de información? En el caso del motor de búsqueda, los resultados que uno puede encontrar abarcan desde los aspectos generales de las personas (edad, profesión, experiencia laboral, lugar de residencia) hasta los detalles ínfimos de la vida privada (hábitos personales, estado civil, información bancaria, fotografías familiares, etcétera). La máquina algorítmica se atribuye la potestad de ocultar o mostrar determinada información según las características de navegación de las personas y el contenido digital que este vampiro de datos pueda extraer[^3].
 
-[^3]: Esta propuesta no se detiene a buscar elementos para descajanegrizar la manera en la que operan los algoritmos de búsqueda. Solo está centrado en utilizarlos como una herramienta de recuperación de información y mostrar cómo este algoritmo puede influir significativamente en la percepción que las personas, ajenas al mundo académico, pueden llegar a formarse del trabajo de los investigadores.
+[^3]: Esta propuesta no se detiene a buscar elementos para *descajanegrizar* la manera en la que operan los algoritmos de búsqueda. Solo está centrado en utilizarlos como una herramienta de recuperación de información y mostrar cómo este algoritmo puede influir significativamente en la percepción que las personas, ajenas al mundo académico, pueden llegar a formarse del trabajo de los investigadores.
 
 El asunto puede cobrar mayor interés social cuando los resultados de búsqueda aluden a la información de personas que ocupan una posición pública, cuando los datos personales aluden a individuos cuyas actividades se encuentran en constante escrutinio.
 
@@ -149,7 +151,7 @@ El resultado de dicho cálculo permite establecer la diferencia numérica entre 
 
 [^9]: Un estudio llevado a cabo por FirstPageSage, una consultoría de análisis web que, a partir de sus propios datos internos, así como de la integración de los resultados de otras consultorías similares, ha estimado la proporción de clicks que obtienen los resultados de búsqueda desde la primera posición (39.8%) hasta la décima (1.6%). Ver FirstPageSage, "Google Click-Through Rates (CTRs) by Ranking Position in 2024", 18 de diciembre de 2024. Consultado el 12 de enero de 2025 [[https://bit.ly/3NWTvdi]{.underline}](https://bit.ly/3NWTvdi)
 
-La proporción de clicks asociada a una determinada posición señala la importancia que tiene cada una de éstas cuando las personas buscan conocer y acceder a determinada información. Los resultados del motor de búsqueda le exponen al usuario una serie de enlaces o links a páginas web que contienen información relacionada, directa e indirectamente, a los términos de búsqueda solicitados. Dicho de otra manera, la posición que ocupan los sitios web en los resultados de búsqueda determina significativamente el número de personas que pueden llegar a consultar el contenido de esos sitios web, sobre todo los que corresponden a las primeras dos posiciones, tal y como veremos más adelante. Estos sitios web obtienen la mayor probabilidad de consulta, esto es, el mayor grado de visibilidad o exposición de sus contenidos\[.[^10]
+La proporción de clicks asociada a una determinada posición señala la importancia que tiene cada una de éstas cuando las personas buscan conocer y acceder a determinada información. Los resultados del motor de búsqueda le exponen al usuario una serie de enlaces o links a páginas web que contienen información relacionada, directa e indirectamente, a los términos de búsqueda solicitados. Dicho de otra manera, la posición que ocupan los sitios web en los resultados de búsqueda determina significativamente el número de personas que pueden llegar a consultar el contenido de esos sitios web, sobre todo los que corresponden a las primeras dos posiciones, tal y como veremos más adelante. Estos sitios web obtienen la mayor probabilidad de consulta, esto es, el mayor grado de visibilidad o exposición de sus contenidos[^10].
 
 [^10]: Esto hay que considerarlo como un resultado provisional porque la información que aparece en las consultas de búsqueda no es la misma a lo largo del tiempo. El algoritmo de búsqueda se nutre constantemente de la información que rastrea de las diferentes plataformas digitales. Al incrementar y cambiar la información y el volumen de datos, el posicionamiento de los resultados de búsqueda es recalculado periódicamente. De tal suerte que la posición en la que aparecen los diferentes sitios web puede variar de un periodo a otro. Al año, Google puede realizar varias actualizaciones de sus sistemas de búsqueda y algoritmos.
 
@@ -228,7 +230,7 @@ Para fines ilustrativos, este paso metodológico expone a las categorías de vis
 3.  *Visibilidad Baja-Positiva.* Esta categoría reúne a los sitios web con información relevante sobre el perfil de los investigadores y que está avalada por la institución. Sin embargo, éstas presentan una baja visibilidad debido a que el algoritmo de búsqueda les asigna alguna posición entre los lugares 6 y el 10. En este grupo cabe contar a las páginas institucionales donde los investigadores colaboran sin contar necesariamente con la titularidad o adscripción definitiva, de ahí que se consideren páginas web formales pero secundarias (F_PIs). Este rubro suma el 11.6% de los sitios web. Además de estas instituciones formales, esta categoría registró a determinados repositorios institucionales donde se difunden parte de los resultados de investigación de los académicos (F_RepoInst). Estos repositorios formales fueron lanzados con la intención de que almacenar, organizar y difundir las publicaciones de los investigadores. Paradójicamente presentan una baja probabilidad de acceso al realizar una consulta de búsqueda por nombre del investigador. En conjunto, los registros que apuntan a este tipo de espacios web suman el 5.3% de los casos observados.
 4.  *Visibilidad Baja-Negativa.* Aquí cabe mencionar a los sitios y plataformas digitales que van a tener una probabilidad muy baja de visitas y que además no aportan valor de contenido sobre el perfil académico de los investigadores. No obstante, vale la pena señalarlos debido a que una considerable proporción (8.9%) hace referencia a identidades homónimas. Como ya se ha señalado antes, este dato puede sugerir una falta de información relevante sobre el perfil público de los investigadores. De ahí que el algoritmo de búsqueda muestra identidades similares a las solicitadas en las consultas de búsqueda.
 
-![Representación espacial de los indicadores de visibilidad y la tipología de los sitios web](images/clipboard-166497021.png){.ilustración fig-align="center"}
+![Representación espacial de los indicadores de visibilidad y la tipología de los sitios web](images/clipboard-166497021.png){fig-align="center"}
 
 # Conclusiones
 
@@ -236,106 +238,111 @@ El tipo de información y la relevancia de los resultados de búsqueda han permi
 
 Dependiendo del grado de relevancia que estimen los algoritmos de búsqueda, la huella digital de las personas puede estar visible u oculta en distintos grados. La relevancia de los resultados de búsqueda no necesariamente expone a los sitios web en términos de objetividad, veracidad y exhaustividad de sus contenidos. En ocasiones la posición de los resultados de búsqueda suele reflejar las tendencias de búsqueda que surgen al momento de realizar las consultas, resultados de orden sincrónico que pueden influir subjetivamente sobre un tema en particular e incluso en la reputación de una persona. Durante esta observación pudieron ubicarse un par de casos polémicos que ameritan mención y que ponen de relieve el papel de los algoritmos de búsqueda en visibilizar u ocultar determinado tema.
 
-![Caso 1. Al escribir el nombre de este académico sobre la caja de búsqueda, Google arroja resultados de autocompletado, una predicción de lo que probablemente el usuario quiere encontrar sobre este particular término. El autocompletado muestra las tendencias o consultas recurrentes que han hecho los usuarios y que están relacionadas con el término de búsqueda. Esta captura de pantalla presenta el nombre del académico (borrado por cuestiones de privacidad) seguido de una palabra que refleja las principales consultas de búsqueda. En este ejemplo destaca la palabra “denuncia”, la cual lo involucra en un supuesto tema de acoso](images/clipboard-1979658417.png){.ilustración fig-align="center"}
-
-![Caso 2. Captura de pantalla de un autocompletado de búsqueda que involucra a un académico en un supuesto caso de acoso. Entre los primeros resultados del autocompletado se muestra la palabra "acosador". En la actualidad (febrero de 2025) este resultado de autocompletado ya no existe. Cabe recordar que los resultados de búsqueda cambian constantemente ante la actualización periódica del algoritmo y el constante incremento y cambio en el volumen de información que éste analiza.](images/clipboard-1919401924.png){#ilustración fig-align="center"}
-
 Finalmente, este ejercicio de observación permitió constatar que una apropiada difusión de la identidad en internet puede contribuir a formar en los académicos un *capital de visibilidad,* es decir, una serie de referencias positivas sobre el perfil de los académicos que presenta una alta probabilidad de acceso. Estas referencias no solo comunican el perfil curricular del académico, también conducen al acceso a las publicaciones y a generar potencialmente otro tipo de interacciones dentro y más allá del mundo académico y las universidades. En este sentido, las instituciones académicas y científicas, al igual que los investigadores, deben de poner atención en la apropiada construcción de perfiles académicos en las plataformas digitales, de lo contrario los algoritmos se encargarán de realizar dicha labor con base en sus propios criterios.
+
+![Al escribir el nombre de este académico sobre la caja de búsqueda, Google arroja resultados de autocompletado, una predicción de lo que probablemente el usuario quiere encontrar sobre este particular término. El autocompletado muestra las tendencias o consultas recurrentes que han hecho los usuarios y que están relacionadas con el término de búsqueda. Esta captura de pantalla presenta el nombre del académico (borrado por cuestiones de privacidad) seguido de una palabra que refleja las principales consultas de búsqueda. En este ejemplo destaca la palabra “denuncia”, la cual lo involucra en un supuesto tema de acoso](images/clipboard-1979658417.png){fig-align="center"}
+
+![Captura de pantalla de un autocompletado de búsqueda que involucra a un académico en un supuesto caso de acoso. Entre los primeros resultados del autocompletado se muestra la palabra "acosador". En la actualidad (febrero de 2025) este resultado de autocompletado ya no existe. Cabe recordar que los resultados de búsqueda cambian constantemente ante la actualización periódica del algoritmo y el constante incremento y cambio en el volumen de información que éste analiza.](images/clipboard-1919401924.png){fig-align="center"}
 
 # Anexo
 
-+---------------------------------+---------------------------------------------------------------------+--------------+
-|                                 | > **FORMAL**                                                        |              |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-| > Página institucional primaria | > Sitio donde está adscripto el académico como investigador         | > F_PIp      |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-| > Página institucional          | > Sitio donde está adscripto el académico como docente o realizando | > F_PIs      |
-| >                               | >                                                                   |              |
-| > secundaria                    | > otras funciones                                                   |              |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-| > Repositorios Institucionales  | > Repositorios o base de datos institucionales                      | > F_RepoIns  |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-|                                 |                                                                     |              |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-|                                 | > **INFORMAL**                                                      |              |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-| > Linkedin homónimo             | > Nombre homónimo. No pertenece al investigador                     | > I_Lh       |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-| > Linkedin                      | > El titular de la cuenta es el investigador                        | > I_Linkedin |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-| > Google Scholar                | > El titular de la cuenta es el investigador                        | > I_GS       |
-+---------------------------------+---------------------------------------------------------------------+--------------+
-| > Sitios homónimos en gral.     | > Sitio homónimo en general                                         | > I_homonimo |
-+---------------------------------+---------------------------------------------------------------------+--------------+
++--------------------+----------------------------------+--------------+
+|                    | > **FORMAL**                     |              |
++--------------------+----------------------------------+--------------+
+| > Página           | > Sitio donde está adscripto el  | > F_PIp      |
+| > institucional    | > académico como investigador    |              |
+| > primaria         |                                  |              |
++--------------------+----------------------------------+--------------+
+| > Página           | > Sitio donde está adscripto el  | > F_PIs      |
+| > institucional    | > académico como docente o       |              | 
+| > secundaria       | > realizando otras funciones     |              |
++--------------------+----------------------------------+--------------+
+| > Repositorios     | > Repositorios o base de datos   | > F_RepoIns  |
+| > Institucionales  | > institucionales                |              |
++--------------------+----------------------------------+--------------+
+|                    |                                  |              |
++--------------------+----------------------------------+--------------+
+|                    | > **INFORMAL**                   |              |
++--------------------+----------------------------------+--------------+
+| > Linkedin         | > Nombre homónimo. No pertenece  | > I_Lh       |
+| > homónimo         | > al investigador                |              | 
++--------------------+----------------------------------+--------------+
+| > Linkedin         | > Titular de la cuenta es el     | > I_Linkedin |
+|                    | > investigador                   |              |
++--------------------+----------------------------------+--------------+
+| > Google           | > Titular de la cuenta es el     | > I_GS       |
+| > Scholar          | > investigador                   |              |
++--------------------+----------------------------------+--------------+
+| > Sitios homónimos | > Sitio homónimo en general      | > I_homonimo |
+| > en general       |                                  |              |
++--------------------+----------------------------------+--------------+
 
 : *Tipologías de sitios web. Ejemplo de las tipologías con mayor frecuencia en la clasificación de los sitios web. Para fines de esta propuesta solo se muestran los casos contrastantes que se mencionan en el apartado de "Tipología y grados de visibilidad".*
 
-Tabla 2. Frecuencias de sitios web por tipo de visibilidad
+\newpage
 
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               | > Visibilidad Alta |              | > Visibilidad Baja |             |             |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > Categoría   | > Frecuencia       | > Porcentaje | > Categoría        | > Frecuenci | > Porcentaj |
-|               |                    |              |                    | >           | >           |
-|               |                    |              |                    | > a         | > e         |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > F_PIp       | 27                 | > 29.3       | > I\_              | > 41        | > 18.2      |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > F_PIs       | 9                  | > 9.8        | > F_PIs            | > 26        | > 11.6      |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_Linkedin  | 8                  | > 8.7        | > I_homonimo       | > 20        | > 8.9       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I\_         | 7                  | > 7.6        | > I_Gimages        | > 18        | > 8.0       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_Lh        | 6                  | > 6.5        | > I_docs           | > 14        | > 6.2       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_opinion   | 6                  | > 6.5        | > F_RepoIns        | > 12        | > 5.3       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > F_RepoIns   | 5                  | > 5.4        | > I_RG             | > 10        | > 4.4       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_GS        | 5                  | > 5.4        | > F_PIp            | > 8         | > 3.6       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_FBh       | 4                  | > 4.3        | > SI\_             | > 7         | > 3.1       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_ACA       | 3                  | > 3.3        | > I_Gbooks         | > 6         | > 2.7       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_Gimages   | 3                  | > 3.3        | > SI_FBi           | > 6         | > 2.7       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_homonim   |                    |              | > F_ArtIndex       |             |             |
-| >             |                    |              |                    |             |             |
-| > o           |                    |              |                    |             |             |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               | 2                  | > 2.2        |                    | > 5         | > 2.2       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_docs      | 1                  | > 1.1        | > I_NP             | > 5         | > 2.2       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_FBp       | 1                  | > 1.1        | > I_RGr            | > 5         | > 2.2       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_FBv       | 1                  | > 1.1        | > F_RepoN          | > 4         | > 1.8       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_Gmaps     | 1                  | > 1.1        | > I_SWps           | > 4         | > 1.8       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_RG        | 1                  | > 1.1        | > I_IGh            | > 3         | > 1.3       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > I_Wikipedia | 1                  | > 1.1        | > SI_Gral          | > 3         | > 1.3       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > SI\_        | > 1                | > 1.1        | > SI_TWi           | > 3         | > 1.3       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-| > Total       | > 92               | > 100.0      | > SI_YouTi         | > 3         | > 1.3       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               |                    |              | > I_ACAr           | > 2         | > .9        |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               |                    |              | > I_FBr            | > 2         | > .9        |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               |                    |              | > I_Gral           | > 2         | > .9        |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               |                    |              | > I_GS             | > 2         | > .9        |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               |                    |              | > I_TWh            | > 2         | > .9        |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               |                    |              | > varios           | > 12        | > 4.8       |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
-|               |                    |              | > Total            | > 225       | > 100.0     |
-+---------------+--------------------+--------------+--------------------+-------------+-------------+
+Tabla 2. Frecuencias (ƒ) de sitios web por tipo de visibilidad
+
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > **Visibilidad** **Alta** |          |             | > **Visibilidad** **Baja** |           |             |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > *Categoría*              | > ƒ      | > \%        | > *Categoría*              | > ƒ       | > \%        |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > F_PIp                    | > 27     | > 29.3      | > I\_                      | > 41      | > 18.2      |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > F_PIs                    | > 9      | > 9.8       | > F_PIs                    | > 26      | > 11.6      |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_Linkedin               | > 8      | > 8.7       | > I_homonimo               | > 20      | > 8.9       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I\_                      | > 7      | > 7.6       | > I_Gimages                | > 18      | > 8.0       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_Lh                     | > 6      | > 6.5       | > I_docs                   | > 14      | > 6.2       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_opinion                | > 6      | > 6.5       | > F_RepoIns                | > 12      | > 5.3       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > F_RepoIns                | > 5      | > 5.4       | > I_RG                     | > 10      | > 4.4       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_GS                     | > 5      | > 5.4       | > F_PIp                    | > 8       | > 3.6       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_FBh                    | > 4      | > 4.3       | > SI\_                     | > 7       | > 3.1       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_ACA                    | > 3      | > 3.3       | > I_Gbooks                 | > 6       | > 2.7       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_Gimages                | > 3      | > 3.3       | > SI_FBi                   | > 6       | > 2.7       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > **I_homonimo**           |          |             | > **F_ArtIndex**           |           |             |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            | > 2      | > 2.2       |                            | > 5       | > 2.2       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_docs                   | > 1      | > 1.1       | > I_NP                     | > 5       | > 2.2       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_FBp                    | > 1      | > 1.1       | > I_RGr                    | > 5       | > 2.2       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_FBv                    | > 1      | > 1.1       | > F_RepoN                  | > 4       | > 1.8       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_Gmaps                  | > 1      | > 1.1       | > I_SWps                   | > 4       | > 1.8       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_RG                     | > 1      | > 1.1       | > I_IGh                    | > 3       | > 1.3       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > I_Wikipedia              | > 1      | > 1.1       | > SI_Gral                  | > 3       | > 1.3       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > SI\_                     | > 1      | > 1.1       | > SI_TWi                   | > 3       | > 1.3       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+| > **Total**                | > **92** | > **100.0** | > SI_YouTi                 | > 3       | > 1.3       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            |          |             | > I_ACAr                   | > 2       | > .9        |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            |          |             | > I_FBr                    | > 2       | > .9        |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            |          |             | > I_Gral                   | > 2       | > .9        |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            |          |             | > I_GS                     | > 2       | > .9        |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            |          |             | > I_TWh                    | > 2       | > .9        |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            |          |             | > varios                   | > 12      | > 4.8       |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
+|                            |          |             | > **Total**                | > **225** | > **100.0** |
++----------------------------+----------+-------------+----------------------------+-----------+-------------+
 
 # Bibliografía

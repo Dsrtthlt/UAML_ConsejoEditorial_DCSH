@@ -4,7 +4,7 @@ subtitle: "New Perspectives in Writing and Dissemination of the Social Sciences"
 abstract: "El artículo analiza cómo el proceso de individuación afecta a las ciencias sociales y su escritura. A partir de las reflexiones de teóricos como Danilo Martuccelli, José Santiago, François Dubet y Guy Bajoit, se argumenta que la experiencia individual debe ocupar un lugar central en la investigación social contemporánea. Se destaca la necesidad de renovar las categorías analíticas y las formas de comunicar los hallazgos científicos para hacerlos más accesibles y relevantes para un público no especializado. Las conclusiones subrayan la importancia de democratizar el conocimiento científico y fomentar un debate público informado, lo que podría ofrecer a la ciudadanía herramientas útiles para comprender mejor su entorno y tomar decisiones informadas. La propuesta teórico-práctica presentada en este artículo busca ampliar las audiencias de las ciencias sociales y reconciliar los roles de investigadores y divulgadores."
 keywords:
   - Individualización
-  - Teoría social
+  - Teoría Social
   - Escritura académica
 author:
   - name: "Paola Vázquez Almanza"
@@ -29,6 +29,7 @@ format:
     toc: true
     number-sections: false
     date-format: "[Última actualización] DD, MMMM, YYYY"
+    csl: apa-6th-edition-es.csl
   tandf-pdf:
     number-sections: false
     toc: false
@@ -45,7 +46,7 @@ citation:
   page-first: "47"
   page-last: "59"
 google-scholar: true
-bibliography: art03.bib
+bibliography: art03_v1n1.bib
 nocite: |
   @Castells1996
   @RealAcademiaEspanola2014
@@ -58,7 +59,7 @@ nocite: |
   @Dubet2023
 ---
 
-\newcommand{\articuloTitulo}{Nuevas perspectivas en la escritura}
+\newcommand{\articuloTitulo}{Nuevas perspectivas en la escritura y divulgación de las ciencias}
 
 \begin{footnotesize}
 \textbf{Resumen}
@@ -67,7 +68,7 @@ El artículo analiza cómo el proceso de individuación afecta a las ciencias so
 
 \textbf{Palabras clave}
 
-Individualización, Teoría social, Escritura académica
+Individualización, Teoría Social, Escritura Académica
 \end{footnotesize}
 
 \newpage

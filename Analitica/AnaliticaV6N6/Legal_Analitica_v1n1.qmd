@@ -5,9 +5,9 @@ format:
     include-in-header:
       - estilo-legal.tex
     header-includes: |
-      \newcommand{\numero}{$_$}
-      \newcommand{\volumen}{$_$}
-      \newcommand{\anio}{$202_$}
+      \newcommand{\numero}{$1$}
+      \newcommand{\volumen}{$1$}
+      \newcommand{\anio}{$2026$}
       \newcommand{\issn}{$XXXX-XXXX$}
       \newcommand{\size}{1.2mb}
     toc: false
@@ -47,7 +47,7 @@ Departamento de Estudios Culturales\
 
 ---
 
-\footnotesize \textbf{An@lítica}, número \numero, volumen \volumen, \anio, es una publicación anual de la Universidad Autónoma Metropolitana a través de la Unidad Lerma, División de Ciencias Sociales y Humanidades. Prolongación Canal de Miramontes 3855, Colonia ExHacienda San Juan de Dios, Alcaldía Tlalpan, C.P. 14387, Ciudad de México y Av. de las Garzas No. 10, Colonia El Panteón, Lerma de Villada, Municipio de Lerma, Estado de México, C.P. 52005. Teléfono: 728 282 7002. Certificado de Reserva de Derechos al Uso Exclusivo de Título No. ______. ISSN \issn, ambos otorgados por el Instituto Nacional del Derecho de Autor. Responsable de la última actualización de este número: José Omar Pérez Baños. Tamaño del archivo: \size.
+\footnotesize \textbf{An@lítica} nueva época.  Número \numero, volumen \volumen, \anio, es una publicación anual de la Universidad Autónoma Metropolitana a través de la Unidad Lerma, División de Ciencias Sociales y Humanidades. Prolongación Canal de Miramontes 3855, Colonia ExHacienda San Juan de Dios, Alcaldía Tlalpan, C.P. 14387, Ciudad de México y Av. de las Garzas No. 10, Colonia El Panteón, Lerma de Villada, Municipio de Lerma, Estado de México, C.P. 52005. Teléfono: 728 282 7002. Certificado de Reserva de Derechos al Uso Exclusivo de Título No. ______. ISSN \issn, ambos otorgados por el Instituto Nacional del Derecho de Autor. Responsable de la última actualización de este número: José Omar Pérez Baños. Tamaño del archivo: \size.
 
 La revista se encuentra disponible en acceso abierto en la página: <http://revista-csh.ler.uam.mx/index.php/rda>
 

@@ -4,8 +4,8 @@ subtitle: "Cognitive Capitalism, Algorithmic Governmentality, and Approaches to 
 abstract: |
   El presente trabajo propone que los abordajes de teorías de comunicación contemporáneos son indisociables del capitalismo cognitivo y de la gubernamentalidad algorítmica como un dispositivo de poder para la actividad humana. Para dar cuenta de ello, y desde la perspectiva de la economía política de la comunicación, en la primera parte se mencionan las fases históricas del capitalismo, explicando la incidencia que en ellas han tenido los tipos de subsunción del trabajo al capital y su relación con el fordismo/taylorismo. En la segunda se explica el origen y concepto del capitalismo cognitivo, así como el papel del trabajo vivo, la comunicación y la subjetividad en la configuración de un orden tecnoliberal, inteligible con el concepto de gubernamentalidad algorítmica. En un tercer momento se relaciona esta forma de gubernamentalidad con la expansión de las tecnologías de información y comunicación y el predominio de dos racionalidades, una de control estratégico-universal y otra social tecnológica, propiciando una multiplicidad de encuentros entre subjetividades cuyas imbricaciones se abordan en el presente en diversas teorías de comunicación.
 keywords:
-  - Capitalismo cognitivo
-  - Gubernamentalidad algorítmica
+  - Capitalismo Cognitivo
+  - Gubernamentalidad Algorítmica
   - Comunicación
   - Subjetividad
 author:
@@ -34,6 +34,7 @@ format:
     toc: true
     number-sections: false
     date-format: "[Última actualización] DD, MMMM, YYYY"
+    csl: apa-6th-edition-es.csl
   tandf-pdf:
     number-sections: false
     toc: false
@@ -50,7 +51,7 @@ citation:
   page-first: "4"
   page-last: "29"
 google-scholar: true
-bibliography: art01.bib
+bibliography: art01_v1n1.bib
 ---
 
 \newcommand{\articuloTitulo}{Capitalismo Cognitivo}
@@ -62,7 +63,7 @@ El presente trabajo propone que los abordajes de teorías de comunicación conte
 
 \textbf{Palabras clave}
 
-Capitalismo cognitivo, gubernamentalidad algorítmica, comunicación y  subjetividad
+Capitalismo Cognitivo, Gubernamentalidad Algorítmica, Comunicación, Subjetividad
 \end{footnotesize}
 
 \newpage
@@ -74,7 +75,7 @@ This paper proposes that contemporary communication theoretical approaches are i
 
 \textbf{Keywords}
 
-Cognitive capitalism, algorithmic governmentality, communication and subjectivity
+Cognitive Capitalism, Algorithmic Governmentality, Communication,  Subjectivity
 \end{footnotesize}
 
 ------------------------------------------------------------------------
