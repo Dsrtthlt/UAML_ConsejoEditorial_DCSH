@@ -1,5 +1,6 @@
 # ============================================
 # SCRIPT PARA DUPLICAR ESTRUCTURA DE REVISTA
+# Versión corregida: Sin subcarpeta Analitica
 # ============================================
 
 # Cargar paquetes
@@ -12,68 +13,62 @@ library(stringr)
 # CONFIGURACIÓN (MODIFICAR ESTOS VALORES)
 # ============================================
 
-# Planta: carpeta base que usará como modelo
-plantilla <- "AnaliticaV7N7_2026"
+# Carpeta plantilla (la que quiere duplicar)
+plantilla <- "Analitica_v1n2"
 
-# Volumen y número de la plantilla
-vol_plantilla <- "7"
-num_plantilla <- "7"
+# Número actual (volumen y número de la plantilla)
+vol_actual <- "1"
+num_actual <- "2"
 
-# Volumen y número NUEVOS (el volumen se mantiene, solo cambia el número)
-vol_nuevo <- "7"        # Se mantiene en 7
-num_nuevo <- "8"        # Cambia: 7, 8, 9, 10 para 2026
-año <- "2026"
+# Nuevo número (lo que quiere crear)
+vol_nuevo <- "1"      # Se mantiene en 1
+num_nuevo <- "6"      # CAMBIE ESTO: 3, 4, 5, etc.
 
-# Directorio base donde se crearán las nuevas carpetas
-# (relativo al directorio de trabajo o ruta absoluta)
-directorio_destino <- "Analitica"
+# Directorio donde se crearán las nuevas carpetas
+# "." significa "directorio actual"
+directorio_destino <- "."
 
 # ============================================
 # NO MODIFICAR DE AQUÍ HACIA ABAJO
 # ============================================
 
-# Patrones a buscar (diferentes combinaciones de V7N7, v7n7, etc.)
+# Crear el patrón de búsqueda
+patron_viejo <- paste0("v", vol_actual, "n", num_actual)
+patron_nuevo <- paste0("v", vol_nuevo, "n", num_nuevo)
+
+# Patrones específicos a buscar
 patrones <- c(
-  paste0("V", vol_plantilla, "N", num_plantilla),
-  paste0("v", vol_plantilla, "n", num_plantilla),
-  paste0("_v", vol_plantilla, "n", num_plantilla),
-  paste0("V", vol_plantilla, "n", num_plantilla),
-  paste0("v", vol_plantilla, "N", num_plantilla),
-  paste0("V", vol_plantilla, "N", num_plantilla, "_")
+  paste0("_v", vol_actual, "n", num_actual),
+  paste0("v", vol_actual, "n", num_actual, "_"),
+  paste0("v", vol_actual, "n", num_actual),
+  paste0("V", vol_actual, "N", num_actual),
+  paste0("_V", vol_actual, "N", num_actual),
+  paste0("V", vol_actual, "N", num_actual, "_")
 )
 
-# Patrones de reemplazo
-patron_reemplazo <- paste0("V", vol_nuevo, "N", num_nuevo)
-
 # Nombre de la nueva carpeta
-nueva_carpeta <- paste0("AnaliticaV", vol_nuevo, "N", num_nuevo, "_", año)
+nueva_carpeta <- paste0("Analitica_", patron_nuevo)
 
 # Ruta completa de destino
 ruta_destino_completa <- path(directorio_destino, nueva_carpeta)
 
 # Validaciones
 if (!dir_exists(plantilla)) {
-  stop("Error: La carpeta plantilla '", plantilla, "' no existe")
+  stop("❌ Error: La carpeta plantilla '", plantilla, "' no existe.\n",
+       "   Directorio actual: ", getwd())
 }
 
 if (dir_exists(ruta_destino_completa)) {
-  stop("Error: La carpeta '", ruta_destino_completa, "' ya existe")
-}
-
-# Crear directorio base si no existe
-if (!dir_exists(directorio_destino)) {
-  dir_create(directorio_destino)
-  message("📁 Directorio base creado: ", directorio_destino)
+  stop("❌ Error: La carpeta '", ruta_destino_completa, "' ya existe.")
 }
 
 # Copiar estructura
-message("📁 Copiando estructura de '", plantilla, "' a '", ruta_destino_completa, "'...")
+message("📁 Copiando estructura de '", plantilla, "'...")
+message("   Destino: ", ruta_destino_completa)
 dir_copy(plantilla, ruta_destino_completa)
 
-# Listar todos los elementos recursivamente
+# Listar y renombrar
 elementos <- dir_ls(ruta_destino_completa, recurse = TRUE, all = TRUE)
-
-# Procesar de abajo hacia arriba para evitar problemas con rutas
 elementos <- sort(elementos, decreasing = TRUE)
 
 contador <- 0
@@ -81,22 +76,20 @@ for (ruta_antigua in elementos) {
   nombre <- path_file(ruta_antigua)
   nombre_nuevo <- nombre
   
-  # Aplicar todos los patrones de reemplazo
   for (patron in patrones) {
     if (str_detect(nombre, patron)) {
-      nombre_nuevo <- str_replace_all(nombre_nuevo, patron, patron_reemplazo)
+      reemplazo <- str_replace(patron, patron_viejo, patron_nuevo)
+      nombre_nuevo <- str_replace_all(nombre_nuevo, patron, reemplazo)
     }
   }
   
-  # Renombrar si hubo cambios
   if (nombre != nombre_nuevo) {
     ruta_nueva <- path(path_dir(ruta_antigua), nombre_nuevo)
     file_move(ruta_antigua, ruta_nueva)
-    message("  ✏️  ", nombre, " → ", nombre_nuevo)
     contador <- contador + 1
   }
 }
 
-message("\n✅ Proceso completado")
-message("📊 Archivos/carpetas renombrados: ", contador)
-message("📂 Nueva carpeta creada en: ", path_abs(ruta_destino_completa))
+message("\n✅ PROCESO COMPLETADO")
+message("📊 Elementos renombrados: ", contador)
+message("📂 Nueva carpeta: ", path_abs(ruta_destino_completa))
