@@ -3,11 +3,11 @@ title: ""
 format:
   pdf:
     include-in-header:
-      - estilo-legal.tex
+      - estilos/estilo-legal.tex
     header-includes: |
-      \newcommand{\numero}{$Insertar_Numero$}
-      \newcommand{\volumen}{$Insertar_Número$}
-      \newcommand{\anio}{$202-$}
+      \newcommand{\numero}{$Numero$}
+      \newcommand{\volumen}{$Numero$}
+      \newcommand{\anio}{$2026$}
       \newcommand{\issn}{$XXXX-XXXX$}
       \newcommand{\size}{0.0mb}
     toc: false

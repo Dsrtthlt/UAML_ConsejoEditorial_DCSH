@@ -1,0 +1,91 @@
+name: mikemahoney218-tandf
+title: Taylor and Francis "Interact" Format
+author: Mike Mahoney
+version: 0.1.3
+contributes:
+  formats:
+    common:
+      # define below YAML configuration common to all formats
+      number-sections: false
+#      filters:
+        # You can include here Lua filters from your extension format 
+      shortcodes:
+        # You can include here Lua filters defining shortcodes from your extension
+        - shortcodes.lua
+      knitr:
+        opts_chunk:
+          echo: false
+    pdf:
+      # define default configuration for the pdf version of your format
+      documentclass: interact
+      colorlinks: true
+      # Content to add in header that your format is using
+      header-includes: |
+        \usepackage{orcidlink}
+        % === Fuentes y tipografía ===
+        \usepackage{fontspec}
+        \setmainfont{Arial}
+        % === Correcciones manuales de términos en inglés ===
+        \renewcommand{\figurename}{Figura}
+        \renewcommand{\tablename}{Cuadro}
+        \renewcommand{\refname}{Referencias}
+        % === Idioma para lualatex (polyglossia) ===
+        \usepackage{polyglossia}
+        \setmainlanguage{spanish}
+        \setotherlanguage{english}
+        \newcommand{\spanishcaption}[1]{\textspanish{#1}}
+        % === Configuración de caption en español (polyglossia + lualatex) ===
+        \usepackage{caption}
+        % Definir comandos que pueden no existir
+        \providecommand{\sourcename}{Fuente}
+        \providecommand{\notename}{Nota}
+        % Configurar captions en español
+        \addto\captionsspanish{
+          \renewcommand{\tablename}{Cuadro}
+          \renewcommand{\figurename}{Figura}
+          \renewcommand{\bibname}{Referencias}
+          \renewcommand{\sourcename}{Fuente}
+          \renewcommand{\notename}{Nota}
+          \renewcommand{\listfigurename}{Lista de figuras}
+          \renewcommand{\listtablename}{Lista de cuadros}
+        }
+        \captionsetup{labelsep=period, font=small, skip=5pt}
+        % === Interlineado y tamaño ===
+        \usepackage{setspace}
+        \onehalfspacing
+        \usepackage{fontsize}
+        \changefontsize{12pt}
+        % === Colores ===
+        \usepackage[svgnames, dvipsnames, table]{xcolor}
+        \definecolor{Pantone253C}{HTML}{AD25A8}
+        % === Encabezados y pies (KOMA-Script) ===
+        \usepackage{scrlayer-scrpage}
+        \clearpairofpagestyles
+        \pagestyle{scrheadings}
+        \setkomafont{pagehead}{\sffamily\footnotesize}
+        \ihead{\textnormal{\color{Pantone253C}\articuloTitulo}}
+        \ohead{\pagemark}
+        \setkomafont{pagefoot}{\sffamily\footnotesize}
+        \ifoot{\textnormal{\color{Pantone253C}An@lítica}}
+        \cfoot{\textnormal{\color{Pantone253C}Nueva Época}}
+        \rofoot{\textnormal{\color{Pantone253C}Vol. 1, Núm. 2}}
+        \KOMAoptions{headsepline=0.1pt, footsepline=0.1pt}
+        \addtokomafont{headsepline}{\color{Pantone253C}}
+        \addtokomafont{footsepline}{\color{Pantone253C}}
+        \addtokomafont{pagenumber}{\color{Pantone253C}}
+      template-partials:
+        # Add here the partials your format is using
+        - "partials/title.tex"
+        - "partials/before-body.tex"
+        - "partials/_authors.tex"
+        - "partials/_affiliations.tex"
+      format-resources:
+        # Add here the resources required for the PDF rendering
+        - interact.cls
+        - orcidlink.sty
+      csl: estilos/apa-6th-edition-es.csl
+    html:
+      # define default configuration for the html version of your format
+      toc: true
+      # Use a CSL file to style (https://www.zotero.org/styles/)
+      csl: estilos/apa-6th-edition-es.csl

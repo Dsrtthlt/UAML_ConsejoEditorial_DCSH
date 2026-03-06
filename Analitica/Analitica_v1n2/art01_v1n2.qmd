@@ -1,0 +1,121 @@
+---
+title: "Nombre"
+subtitle: "Título en inglés"
+abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat magna quam, vel pellentesque erat suscipit ut. Praesent diam quam, eleifend id dictum sit amet, mollis vitae lacus. In ut aliquam purus. Vestibulum ante tortor, elementum malesuada condimentum sit amet, placerat nec leo. Donec purus mi, ultrices eget convallis ut, tristique quis elit. Aliquam eget pellentesque mauris. Nullam finibus diam vel purus scelerisque rhoncus. Aliquam sodales lacinia diam eu convallis. Suspendisse eu pellentesque felis. Aliquam pretium mi ac gravida iaculis. Suspendisse tempor dignissim malesuada. Fusce accumsan mi et eros sodales, nec fermentum risus mollis."
+keywords:
+  - Lorem
+  - Ipsum
+  - Dolor
+author:
+  - name: "Nombre del autor o autora"
+    degree: "Último grado académico"
+    affiliation: "Nombre completo de la institución, campus (si aplica)"
+    email: "coreo@electrónico.com"
+    corresponding: true
+journal-name:
+  - name: "An@lítica"
+    url: "http://revista-csh.ler.uam.mx/index.php/rda"
+issn: "XXXX-XXXX"
+date: "2026-01-28"
+volume: "7"
+number: "1"
+received: ""
+accepted: ""
+published: ""
+doi: ""
+format:
+  html:
+    lang: es
+    theme: 
+      light: lux
+      dark: darkly
+    toc: true
+    number-sections: false
+    date-format: "[Última actualización] DD, MMMM, YYYY"
+    csl: estilos/apa-6th-edition-es.csl
+  tandf-pdf:
+    number-sections: false
+    toc: false
+    lof: false
+    lot: false
+    include-in-header: 
+      text: |
+        \setcounter{page}{16}
+    keep-tex: true
+citation:
+  type: article-journal
+  container-title: "An@litica"
+  url: http://revista-csh.ler.uam.mx/index.php/rda/about
+  page-first: "1"
+  page-last: "2"
+google-scholar: true
+bibliography: dummy.bib
+nocite: |
+  @INEGI2022
+---
+
+\newcommand{\articuloTitulo}{Palabras Clave del Título}
+
+\begin{footnotesize}
+\textbf{Resumen}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat magna quam, vel pellentesque erat suscipit ut. Praesent diam quam, eleifend id dictum sit amet, mollis vitae lacus. In ut aliquam purus. Vestibulum ante tortor, elementum malesuada condimentum sit amet, placerat nec leo. Donec purus mi, ultrices eget convallis ut, tristique quis elit. Aliquam eget pellentesque mauris. Nullam finibus diam vel purus scelerisque rhoncus. Aliquam sodales lacinia diam eu convallis. Suspendisse eu pellentesque felis. Aliquam pretium mi ac gravida iaculis. Suspendisse tempor dignissim malesuada. Fusce accumsan mi et eros sodales, nec fermentum risus mollis.
+
+\textbf{Palabras clave}
+
+Palabra1, Palabra2, Palabra3
+\end{footnotesize}
+
+\newpage
+
+\begin{footnotesize}
+\textbf{Abstract}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat magna quam, vel pellentesque erat suscipit ut. Praesent diam quam, eleifend id dictum sit amet, mollis vitae lacus. In ut aliquam purus. Vestibulum ante tortor, elementum malesuada condimentum sit amet, placerat nec leo. Donec purus mi, ultrices eget convallis ut, tristique quis elit. Aliquam eget pellentesque mauris. Nullam finibus diam vel purus scelerisque rhoncus. Aliquam sodales lacinia diam eu convallis. Suspendisse eu pellentesque felis. Aliquam pretium mi ac gravida iaculis. Suspendisse tempor dignissim malesuada. Fusce accumsan mi et eros sodales, nec fermentum risus mollis.
+
+\textbf{Keywords}
+
+Keyword1, Keyword2, Keyword3
+\end{footnotesize}
+
+------------------------------------------------------------------------
+
+# Apartado 1
+
+Nulla facilisi. Integer sit amet consequat arcu. Sed sagittis orci lorem, id semper augue pellentesque at. Sed nec ligula commodo, volutpat lacus varius, luctus odio. Nulla sagittis neque a neque convallis scelerisque. Suspendisse ipsum purus, feugiat ac tincidunt vel, commodo at massa. Proin porttitor tincidunt orci, nec bibendum mauris bibendum ac [@Martinez2021].
+
+Pellentesque erat nibh, vestibulum vitae lectus nec, sagittis pellentesque quam. Pellentesque turpis libero, viverra consequat molestie id, aliquet vel metus. Nullam eget ligula quis nisi sollicitudin ornare. Sed id tortor posuere, vehicula nisi at, pulvinar ipsum. Proin id sollicitudin lorem, a dignissim ipsum. Nam egestas metus non sem tempus mattis. Morbi gravida tincidunt sagittis. Mauris sodales lectus in dolor facilisis efficitur. Proin eget volutpat lorem, quis dictum mauris. Quisque efficitur, velit in viverra euismod, augue ante pharetra nisi, non egestas quam nisl interdum sem. Vestibulum ut risus at nisi aliquam condimentum. Aenean lobortis condimentum turpis, porttitor ullamcorper nibh fermentum varius. Sed nisi magna, euismod non risus nec, pretium iaculis dui. Sed finibus ipsum a risus rhoncus cursus. Fusce tincidunt nisl et ex aliquam consequat vitae vitae eros [@Rodriguez2019: 12].
+
+Nunc ex urna, cursus id eros ut, porta hendrerit sapien. Phasellus at nunc augue. Nam hendrerit feugiat purus, ut lobortis turpis dapibus vitae. Aenean convallis malesuada pulvinar. Nullam tempus magna quis placerat aliquam. Phasellus a pharetra turpis, eu ultrices augue. Mauris quis eleifend nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc in massa auctor, tempus mi ut, mollis lectus. Nulla in ex accumsan, feugiat enim sit amet, pharetra lorem. Etiam feugiat vulputate felis ac sodales. Sed varius sem ante, ac porttitor erat laoreet a. Aliquam ornare est tincidunt, rhoncus lacus sed, eleifend lacus. Fusce placerat pretium nulla sagittis tempor. Quisque vel lacus felis.
+
+# Apartado 2
+
+Quisque ut dui est. Duis interdum, tortor nec dignissim suscipit, sapien ipsum tempus magna, consequat feugiat nulla quam id mi. Morbi placerat metus sit amet finibus convallis. Aenean tincidunt, ipsum sed mollis interdum, justo mi dictum eros, sed finibus odio tellus nec lectus. Maecenas vitae ullamcorper nisl. Duis consequat mi quis luctus rutrum. In ullamcorper, felis et laoreet blandit, tellus orci tristique mauris, ac sodales nisi leo ut sapien. Donec pellentesque porttitor vulputate. Aenean rutrum ultricies dolor in feugiat. Vivamus nec ornare odio, nec dictum est. Aenean et ante quis nisl molestie accumsan luctus quis mauris. Phasellus aliquet congue nisl, non pellentesque nunc condimentum consectetur. Vestibulum bibendum eu diam quis consequat. Vestibulum interdum tortor sed imperdiet ornare.
+
+Vivamus in augue id ligula luctus accumsan. Pellentesque bibendum dolor tellus, vitae tincidunt ex finibus ac. Phasellus a ex viverra, rutrum sem eu, iaculis orci. Aenean ex quam, elementum sit amet elementum ac, congue non sapien. Etiam vel accumsan mi. Morbi a orci vel mauris sodales cursus. Integer vel euismod risus.
+
+Donec gravida non nisi in tristique. Vestibulum justo lacus, viverra at elit viverra, volutpat lobortis mauris. Morbi semper lectus justo, sit amet euismod ante consectetur id. Cras pharetra in lectus sit amet aliquet. Nunc ac luctus turpis. Etiam congue nulla a nunc faucibus ultrices. Etiam dapibus purus nec arcu consequat porttitor.
+
+![Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam velit, venenatis eget blandit ac, scelerisque id erat. Donec eget nulla rutrum, tristique lectus id, cursus est. Suspendisse potenti. Vestibulum rutrum risus eget tortor facilisis bibendum. Sed at semper lacus. Vestibulum bibendum gravida turpis, nec interdum nibh fermentum a. Duis pretium, lorem eget consequat aliquam, leo massa maximus velit, non vehicula metus augue at orci. Sed congue convallis mi, iaculis ultrices metus porttitor eu.](images/generic_image.jpg)
+
+# Apartado 3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam velit, venenatis eget blandit ac, scelerisque id erat. Donec eget nulla rutrum, tristique lectus id, cursus est. Suspendisse potenti. Vestibulum rutrum risus eget tortor facilisis bibendum. Sed at semper lacus. Vestibulum bibendum gravida turpis, nec interdum nibh fermentum a. Duis pretium, lorem eget consequat aliquam, leo massa maximus velit, non vehicula metus augue at orci. Sed congue convallis mi, iaculis ultrices metus porttitor eu.
+
+Aliquam at lectus nec libero hendrerit sodales in at lacus. Morbi id posuere metus, a varius tortor. Etiam at urna sed metus commodo placerat sit amet ac nunc. Aenean tristique velit eget elit iaculis, non hendrerit est viverra. Morbi ligula turpis, tincidunt at aliquam id, vehicula vel dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in aliquet sapien.
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+: Tabla 1.
+
+Maecenas iaculis gravida augue, pellentesque ultrices augue condimentum sodales. Nunc iaculis sem euismod sapien ullamcorper, varius fermentum elit tempus. Maecenas eros enim, venenatis a nisl sed, ultricies efficitur sem. Phasellus quis felis ipsum. Nullam a facilisis mauris. Aliquam est nisi, varius et fermentum a, venenatis at augue. Vestibulum non sollicitudin tortor. Cras in dui sit amet lacus commodo sagittis posuere a tellus. Duis aliquam sem id purus luctus pharetra. Donec ut ligula iaculis, pulvinar ipsum nec, consequat libero. Suspendisse hendrerit ullamcorper tellus, id facilisis diam suscipit a. Pellentesque velit erat, egestas et purus id, egestas porta sem. Proin dictum consequat dictum. Maecenas porttitor suscipit euismod. Donec malesuada, lacus eu cursus ullamcorper, augue libero convallis ante, egestas dictum sem diam ut mi.
+
+# Apartado 4
+
+Donec ac scelerisque mauris. Nulla a urna quam. Morbi eu suscipit sem, vitae convallis nisl. Aenean libero dolor, porttitor non dui placerat, fermentum lacinia augue. Cras faucibus molestie fermentum. Sed et arcu nec urna ultricies porta a in elit. Etiam ac metus at dui hendrerit mollis ut porttitor purus. Sed volutpat posuere dui at egestas. Suspendisse consequat, purus eu sodales rhoncus, tellus dui venenatis sapien, a porta neque justo id eros. Ut eu nulla eleifend, molestie ex ut, iaculis quam. Mauris pharetra tempus velit. Morbi non lectus vestibulum, pretium est condimentum, venenatis justo.
+
+# Referencias
