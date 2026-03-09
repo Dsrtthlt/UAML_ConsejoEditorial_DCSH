@@ -120,7 +120,7 @@ En este sentido, pensar el pódcast como narrativa transmedia emergente implica 
 \newpage
 
 |  |  |  |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Categoría** | **Aspecto** | **Descripción** |
 | Accesibilidad y bajo costo | Producción con recursos mínimos | Se requiere poco equipo técnico y es fácil de distribuir digitalmente. |
 | Estímulo al pensamiento crítico | Estructuración argumentativa | Obliga a organizar la información de forma coherente y atractiva. |
@@ -132,7 +132,7 @@ En este sentido, pensar el pódcast como narrativa transmedia emergente implica 
 : *Beneficios de la producción de podcast. Elaboración propia a partir de @McLoughlin2010*
 
 | **Categoría** | **Aspecto** | **Descripción** |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | Barreras técnicas | Falta de competencias | La producción y edición requieren formación específica. |
 | Legitimidad académica | Escepticismo institucional | No siempre es considerado un formato riguroso o válido para la investigación. |
 | Tiempo de producción | Demanda de recursos temporales | Requiere planificación, grabación, edición y difusión cuidadosa. |
@@ -204,7 +204,7 @@ En síntesis, el análisis del episodio inaugural revela el potencial del pódca
 \newpage
 
 |  |  |
-|------------------------------------|------------------------------------|
+|----|----|
 | **Fortalezas** | **Oportunidades de mejora** |
 | Estructura narrativa coherente | Refinar edición sonora y equilibrio de audio |
 | Calidad sonora adecuada | Fomentar llamada a la audiencia en el episodio |
