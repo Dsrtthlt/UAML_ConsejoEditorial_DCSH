@@ -1,4 +1,6 @@
 ---
+cod_art: "001"
+journal_section: "Temática"
 title: "Título del artículo"
 subtitle: "Título del artículo en inglés"
 abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat magna quam, vel pellentesque erat suscipit ut. Praesent diam quam, eleifend id dictum sit amet, mollis vitae lacus. In ut aliquam purus. Vestibulum ante tortor, elementum malesuada condimentum sit amet, placerat nec leo. Donec purus mi, ultrices eget convallis ut, tristique quis elit. Aliquam eget pellentesque mauris. Nullam finibus diam vel purus scelerisque rhoncus. Aliquam sodales lacinia diam eu convallis. Suspendisse eu pellentesque felis. Aliquam pretium mi ac gravida iaculis. Suspendisse tempor dignissim malesuada. Fusce accumsan mi et eros sodales, nec fermentum risus mollis."
