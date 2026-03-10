@@ -30,7 +30,7 @@ format:
         
         \vspace{2cm}
         
-        {\LARGE\bfseries Experimentación formal en internet}
+        {\LARGE\bfseries Título del dossier}
     \end{center}
     
     \vfill
